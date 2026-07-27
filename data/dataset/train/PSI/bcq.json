@@ -1,0 +1,1973 @@
+{
+  "format": "tao-vl-reason-v1.0",
+  "metadata": {
+    "type": "annotation",
+    "task": "bcq",
+    "date": "2026-05-27",
+    "license": "TASI Benchmark Data Sharing Agreement (inherited from PSI_VQA/train/videos 2.0)",
+    "source": "PSI_VQA/train/videos 2.0 / PSI_VQA/train/videos 3.0 (NCSU Intelligent Cognitive Ergonomics Lab)"
+  },
+  "media_root": null,
+  "items": [
+    {
+      "item_index": "0970851fa837dfc2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0001_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "896ccabddc9e63d2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0002_track_8.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c607bae64eb9da77",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0003_track_143.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b2ced41270e63dd7",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0004_track_22.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9c00ee36c58707ec",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0005_track_55.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "eb6684cc2e67e4a2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0006_track_3.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8616ee2fc120db1e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0007_track_1.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7a30427089d4be5b",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0008_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.27s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7a88492365d2d99e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0009_track_3.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.07s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6ff4433bf90e2635",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0010_track_4.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2d9f81c74d5cf8b8",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0011_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.37s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9338ffb1a6a80183",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0012_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0bba3386a9c6c07f",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0013_track_5.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e15e3425ca5bf79c",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0013_track_59.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e896a4a9141b886e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0014_track_18.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f5debdb81aa1f613",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0015_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "da72ff044388503c",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0016_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "768805eb54a9734c",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0017_track_3.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "37b3359fadeb5eda",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0018_track_6.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0e601a9749cbca03",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0018_track_77.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3790979a6b91891d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0019_track_28.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "75a8ae4545a4191c",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0020_track_37.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c517edd4d94e62ee",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0021_track_7.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d48f2203432c8333",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0022_track_46.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5152787dd03c746b",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0023_track_69.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1c17941592d7110d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0024_track_44.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3249eb940c8f0f20",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0025_track_15.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6fe7a1d57b20feeb",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0026_track_25.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.02s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "842c1ba6457f00ee",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0027_track_66.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ae56cf87f2f0aa6e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0028_track_37.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "29a61c79f7103044",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0029_track_67.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "08009929582ac59f",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0030_track_50.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2c5225ed1ccc8833",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0031_track_92.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.27s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a8038e978efc0206",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0031_track_93.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "facdde666b14d355",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0032_track_8.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.43s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2b793cacdd9b08ee",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0033_track_15.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.87s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7d18829488382a21",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0033_track_17.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=9.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7b1848088e46af1b",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0034_track_2.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "889752830c143657",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0035_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b608330a964ca054",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0035_track_49.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=12.77s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "85a8d702ddf9461d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0036_track_93.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d4eb96d326b4c19d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0037_track_7.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e70c5816f0e8953a",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0037_track_92.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a2f9d90d7f0b3fc2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0038_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.67s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3f777b4911ba22e0",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0038_track_10.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8ae31346ed33df1b",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0039_track_2.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.83s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "bdc6da8fb4ddbbb6",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0040_track_8.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "733ebe75cc4533a0",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0041_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "94ae2f8bb59233ba",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0042_track_73.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "01ddf1c02b646773",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0043_track_94.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1eb29a6c388e63d2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0044_track_27.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.47s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "fcaad1c128e6a6c2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0045_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.17s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "360e3cf53c20a105",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0046_track_29.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "440a3584a126424b",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0047_track_11.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.53s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "91b6dbc98485dd19",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0048_track_64.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.03s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "be774aa00491e564",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0048_track_65.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "aac8c75d20b605ae",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0049_track_9.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "430d59f9c77e6bb5",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0049_track_11.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "93f3f863f32a5adf",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0050_track_19.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4cd87a76534d287e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0050_track_57.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3269b989fc7d1bc4",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0051_track_46.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.37s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "06603d78de38087d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0052_track_2.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7f03310b306593f6",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0053_track_15.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7f1a5041f328d528",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0054_track_34.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1dcd401cc62034a0",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0055_track_32.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.47s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b927286c82d408af",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0056_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.47s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d9e27a4f3d8edc5e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0056_track_1.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1187bf79690ab899",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0057_track_5.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.93s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ffec30b19bc7364f",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0058_track_29.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.97s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "168dbeaf9657b0f3",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0058_track_37.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2d5d5781eef60b75",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0059_track_18.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c4e492cad7631212",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0060_track_51.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "60831316708758c8",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0061_track_61.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "817cb2ef1124b3d7",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0062_track_13.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.90s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "bc85abda4a530a94",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0062_track_94.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1e55896f47bd020a",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0063_track_52.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.07s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f48b4b0e3ab85e08",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0065_track_4.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "cfc7b486e58f503a",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0066_track_55.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "01241e2ef56454e2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0066_track_59.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c97daf4529544b5d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0067_track_30.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.63s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1c6a7b83e7dc3b08",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0068_track_5.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=11.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "12e648dbc4bfa3b5",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0069_track_9.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7ff1c8a886b2f2d2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0070_track_25.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "df7aa05e0b6c01f9",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0071_track_28.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1904e2185baeff6b",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0072_track_44.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e1f66cd16754f9f7",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0073_track_1.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d98eaf32ecb01def",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0074_track_40.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "741d6e66825bf5ab",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0075_track_6.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f48e663043e49246",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0075_track_44.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.10s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ae26af64ed9696c2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0076_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=10.10s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "018e559fc366eda3",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0076_track_34.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.33s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3a0a564c24afa0a7",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0076_track_35.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4cae5a75e9211559",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0076_track_37.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2f55e2fa762b127e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0077_track_41.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.87s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4a4b92dcf014e72d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0078_track_36.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "cd02b81fc3decebe",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0079_track_46.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f4c5855368f8ea19",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0080_track_108.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.67s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "901370ffcd4d5a41",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0081_track_30.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.23s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9692ab6e1bff1562",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0081_track_31.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.28s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b9d667cf1aeeed5e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0082_track_17.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a025b3fac37a33d3",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0083_track_3.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "bf73129183e49f0e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0084_track_51.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3010c452607cd18b",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0085_track_22.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d87360e565aab914",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0085_track_23.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "eff25006ed6467cb",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0086_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.07s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2825408ea993dea7",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0087_track_24.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d95566075a5f1440",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0088_track_46.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "31f4b6c00badc220",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0089_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=10.33s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "43298d77b1934702",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0089_track_19.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=0.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "402a54429cef9bfd",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0090_track_36.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "cd6de899986fb2c9",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0091_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "24c9c4a2a70d16c5",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0092_track_53.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.57s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "af6c787bb14aad8f",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0101_track_36.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "802f2b50ca465e5a",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0102_track_6.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=12.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "da6171873a0a9ae4",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0102_track_89.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.33s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d8fd50eaacbcf220",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0104_track_32.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.53s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "17f7af4f8e689bce",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0105_track_80.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "607a9c68c9b1f84d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0106_track_30.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d83b0372087c2b56",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0107_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "802a4b52e91155c7",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0107_track_61.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.83s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "dfe57752f0066be6",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0108_track_5.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0dd51eb9a5aba387",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0108_track_78.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=0.90s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6226598e5f77b34e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0109_track_6.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8e0f795a399fddb0",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0110_track_35.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0608bdd10791394f",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0111_track_19.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=9.90s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6af21921bfe7fb16",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0111_track_67.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e5c363e67f832e2e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0112_track_13.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.83s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0ade1244d2ff7e86",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0113_track_80.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5d4c1cf0619a11e4",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0114_track_7.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.07s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ac403a68dbc788be",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0115_track_10.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=12.97s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6789c59caf8d43cc",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0115_track_15.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=14.97s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0166a2b1381cc546",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0115_track_55.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8f7d50072f57af52",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0116_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "aac9a2d0abb32d96",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0117_track_27.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.07s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6337f6062250f3b0",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0118_track_9.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.11s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "17bc466d27a00f8b",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0119_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6b6b0431c0d7a627",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0119_track_1.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.90s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f4e3c02c8811092c",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0119_track_9.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.87s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d560986872a409f2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0120_track_10.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.27s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "47b98572b17eb3ff",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0120_track_14.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.51s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5e673bced0bd4647",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0121_track_34.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.33s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "307432c21c1986b6",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0122_track_1.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "43094ab0cd806e81",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0122_track_29.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.43s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "26aa949131fa118a",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0123_track_31.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=9.87s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c874c6fc479377a4",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0125_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=10.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0988509c3971bf29",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0125_track_42.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.67s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "aabdee075f98b64f",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0125_track_43.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c25f452c1fb52bfa",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0126_track_12.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ede99e8062416865",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0127_track_72.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.83s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a4f964b5535cd638",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0128_track_41.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.07s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0f4463fa8d31f071",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0128_track_42.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a3b83164e0807778",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0129_track_8.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7bc0644f167a83ec",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0130_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "183c9bd07d5fc52a",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0130_track_23.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.90s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a177cd4b22b2aaef",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0131_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "40cf92a634ab6d3c",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0131_track_7.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=10.63s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "03e175e5f408b3bf",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0131_track_40.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=9.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "085a61e50e428946",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0132_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b0d8d92d8b7c5f80",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0133_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.51s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4d249bfe69349cce",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0134_track_30.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "838aa4f9f0c2b9bb",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0135_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "245c13871f01f5de",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0136_track_8.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=12.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9b7c7f4d5a826f93",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0136_track_9.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=10.37s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e3e6ea18038e2bc3",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0136_track_43.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.21s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "11c44e8820af3b9a",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0136_track_44.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.57s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5dcf7cf41d7959da",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0137_track_3.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.57s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "af268ee53daec27a",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0138_track_6.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.27s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8ca99a387ada12cd",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0138_track_7.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=10.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "41a65e9c258aa281",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0138_track_9.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.71s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5aa41c95903e2334",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0139_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "18a9fab1be5dcd72",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0139_track_31.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2ec4a4e7c88c6267",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0140_track_1.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.67s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "af9d66c7acb69390",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0140_track_41.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "962ae4f46d39c985",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0141_track_68.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3d18421fcf223963",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0142_track_5.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1718e043cdbdc0f6",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0143_track_33.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5d962aec9a968359",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0144_track_7.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.90s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "26cd99b5130c61a9",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0145_track_23.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5795f2278cf3d476",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0146_track_12.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "70b0450f24a0e6d9",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0149_track_1.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.10s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "645c1c5cb98cd169",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0150_track_2.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2d742b87a85b981d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0151_track_1.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.10s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1962f572b5427025",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0152_track_29.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9c48935b386261ea",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0152_track_31.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.70s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b9d270d22d82cbd2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0153_track_14.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "98644381366141cb",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0153_track_22.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.17s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "328c5abc17f145f4",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0153_track_23.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7a7a63e5468ecbcc",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0154_track_25.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.03s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8fa81b6424483b8f",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0156_track_26.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f3cbe6ee34216387",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0156_track_27.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2fe539d339d8ed1b",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0157_track_55.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.50s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9d52a0ce43c9bc3d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0157_track_56.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.10s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c118f49ff2aad425",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0157_track_57.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.10s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9177f8552274027c",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0158_track_6.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.13s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5206c0acd9f50ec7",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0158_track_8.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5c5f377bb33ec27d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0158_track_63.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.97s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6fdb1d22d24c2c3e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0159_track_5.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.90s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "cfee0628b2ff53a5",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0159_track_15.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b28508034bb3abc5",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0160_track_13.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "cef4c84d262f1097",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0161_track_4.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.07s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9c49effa5924883d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0163_track_1.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.23s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "53cb36a7891090a1",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0164_track_49.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.27s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9c2ebdca3d938d2d",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0165_track_22.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.07s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9d4110d71e6be6c5",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0166_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.53s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "42bce11a01cc14c5",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0166_track_67.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2cba5c145ed492b9",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0168_track_60.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.13s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "df3e504dd229a739",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0169_track_5.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d4f40d46d2047551",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0169_track_8.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3434bd7821794c22",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0169_track_9.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0eb23dd66fcb6304",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0170_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=11.53s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d019f762e4d965d8",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0170_track_56.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c5ddbe6adf07dd86",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0171_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "330a386dd3891f22",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0172_track_2.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "14710f04960950ad",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0174_track_16.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.10s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "94fc17ce3eee2ba2",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0177_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=10.83s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8744dec235c05527",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0177_track_35.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=1.40s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c3752970daa1481b",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0177_track_36.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=9.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a98eb847ea439e42",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0179_track_28.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=2.20s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5b6774cd89c7555e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0181_track_23.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "bed3765c4a08d330",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0182_track_19.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.90s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "744962b437d979ea",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0183_track_16.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.57s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "166076bd114d09d8",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0184_track_10.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3c0a7949dc648f10",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0185_track_31.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.30s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "cb510874bbd8603c",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0185_track_34.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.57s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "caa7b5ecb9bb81fe",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0186_track_38.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=11.13s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b36ab476268b748e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0187_track_27.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.83s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "111b6ff743d0c797",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0188_track_87.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "69fa579a77ff771a",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0188_track_88.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.10s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e9d62b83729a2a1c",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0189_track_25.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.53s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c1b7133b508cec59",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0189_track_26.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=4.53s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "beb21c653cf9ca81",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0190_track_54.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=5.03s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b5f7f16e5357fc0e",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0191_track_2.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=3.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "863e9d1b528994b9",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0191_track_3.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=13.90s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4086d09567ccc77a",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0192_track_27.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "96f98296dc9bae13",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0193_track_6.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.37s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ea3c7491dd0ffcfc",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0194_track_44.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.60s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4efda4043530c51a",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0195_track_29.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.33s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9b28ce131d022bc7",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0196_track_32.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=0.80s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "43d8c8bf39190dab",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0196_track_34.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.83s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "cb4ecf056554bffd",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0197_track_34.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=7.87s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9531c4ed5cc2bd38",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0198_track_5.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=8.00s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "57392d5408665db3",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0200_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=10.33s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "No",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a3ac4db61f30f6db",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0202_track_15.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=10.83s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e7493d0c790e8390",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0203_track_0.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=6.23s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9b994e2c8f1cc2ce",
+      "task_type": "bcq",
+      "video_id": "PSI_VQA/train/videos/clear/video_0204_track_2.mp4",
+      "question": "Observe the pedestrian marked with a red bounding box (visible at the start) from t=0s to t=9.86s. Does this pedestrian intend to cross in front of our car? Answer with only Yes or No.",
+      "answer": "Yes",
+      "reasoning": ""
+    }
+  ]
+}

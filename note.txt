@@ -1,0 +1,17 @@
+To Yan:
+
+1. RAG data, I currently copied the RAG data from /data/PSI_VQA_test_rag_stage1 and put in /homes/yl4300/TAU-Agent/data/RAG_Info/test/PSI_VQA. Pls check if this is correct or not. Thanks!
+
+
+
+hare run -it --rm --gpus device=2 \
+  --shm-size=512g \
+  -v "$(pwd)":/workspace/TAU-Agent \
+  -v /mnt/fast0/yl4300/hf_cache:/root/.cache/huggingface \
+  -v /mnt/fast0/yl4300/aicity_output:/output \
+  -v /mnt/fast0/yl4300/aicity_track3_video:/data \
+  -e HF_HOME=/root/.cache/huggingface \
+  -e MODELSELL_API_KEY="sk-3YrNoy0eMp3tVLUppz4b6qsQNyPvh8B8FPEV0lv5UE3YjuTg" \
+  -w /workspace/TAU-Agent \
+  --name aicity_track3_yq \
+  yl4300/tau-agent:latest /bin/bash

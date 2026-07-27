@@ -1,0 +1,1021 @@
+{
+  "format": "tao-vl-reason-v1.0",
+  "metadata": {
+    "type": "annotation",
+    "task": "open_qa",
+    "date": "2026-05-27",
+    "license": "TASI Benchmark Data Sharing Agreement (inherited from PSI_VQA/test/videos 2.0)",
+    "source": "PSI_VQA/test/videos 2.0 / PSI_VQA/test/videos 3.0 (NCSU Intelligent Cognitive Ergonomics Lab)"
+  },
+  "media_root": null,
+  "items": [
+    {
+      "item_index": "81e15aa0170b2aa9",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0205_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=9.867s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "bf38384086599009",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0205_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=9.867s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f4d9357b645fbb08",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0205_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=9.867s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ae42df8f31a1b55f",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0206_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d4bf3ce6f5e9c5c0",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0206_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ac86d80acad7c856",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0206_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "fac36dde5420d2a8",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0207_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=2.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "df25c154eee685a6",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0207_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=2.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "52835de5ffa7e48d",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0207_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=2.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ecb178ec0f52319b",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0208_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.46s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "038fa93af4462a77",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0208_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.46s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "287cd0c3e276679f",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0208_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.46s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5d0f0c82604b661e",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0209_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.32s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7319f9d571e965cd",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0209_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.32s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b0d52adf71e23051",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0209_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.32s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0f68f55308ca4573",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0211_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=9.067s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a862b761f7318bd4",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0211_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=9.067s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e1f01305ea928188",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0211_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=9.067s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ea82568e1a0742a1",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0212_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=9.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3f91072900e52994",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0212_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=9.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "45e09747f93657e3",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0212_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=9.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "cc35b159ced679b7",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0213_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.533s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7d7261a696ec9ce8",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0213_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.533s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "31e4673e3b5732ea",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0213_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.533s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9ab16ba3bed768e0",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0214_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.89s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "cec1f2f55ea9f1fc",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0214_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.89s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a43c7bbbd633a62a",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0214_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.89s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "07530bddb1793e2e",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0216_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.267s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "18ce51bb160ec6bc",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0216_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.267s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6ac4fa9db1f5a007",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0216_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.267s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "19e6e5c6413a9651",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0218_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "51f8c35ba033d6a1",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0218_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d15f472e30d90ea9",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0218_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "fe8842a78894a364",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0219_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.7s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6642015fbc65a149",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0219_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.7s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e112c0857eb04ba0",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0219_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.7s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8981d9e1947767fc",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0220_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=7.6s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "32cd5ed8845a42e3",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0220_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=7.6s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3060251671f75d21",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0220_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=7.6s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8c2ee91feb37c392",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0221_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.367s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b68c9136fc9156b5",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0221_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.367s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8b0b6848b30dfaf1",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0221_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.367s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d66b3b3989165d5d",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0222_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "780b989bec2113a2",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0222_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6142a72dbefc66ae",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0222_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b4c21b7482319b99",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0224_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.233s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "afa9c47020c51c7a",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0224_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.233s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "76bd997593bc868e",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0224_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.233s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ae9f5176b90802c2",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0224_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.633s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "39f0e41c664c2764",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0224_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.633s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a87a51e93a44a81b",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0224_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.633s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "818e70f91fdde028",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0224_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=11.6s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "351d0d4cab351168",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0224_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=11.6s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "842658790db67aef",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0224_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=11.6s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "df85268bfcd7ffb1",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0225_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.13s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "45fd27ea59f82e67",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0225_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.13s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a8cd4029178b4874",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0225_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.13s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "55a36657ad5af9a5",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0227_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0449576b732d0b29",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0227_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6f1389a4aa260a9b",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0227_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0e68f63f8a0ed9b9",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0228_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.167s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "80efe5c62c2c771d",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0228_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.167s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2c0dc3b7c3ce0d04",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0228_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.167s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2058decef6a57557",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0229_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.4s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2793409e5cb96d3a",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0229_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.4s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a82e2046fc104995",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0229_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.4s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e474da80445c879a",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0230_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=2.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "aa4d5b2da068b330",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0230_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=2.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "347f39ed3b5bcebc",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0230_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=2.8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4a845981c440da46",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0230_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3e21e6f7be79a706",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0230_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0bb574e32663059c",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0230_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "25ad07b9bbbceb72",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0230_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=14.467s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "fa36a88baba3cf6e",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0230_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=14.467s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2b4cb112be5b2d5f",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0230_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=14.467s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ea553db3a4820198",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0231_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.133s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2f8b885ca3ee8108",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0231_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.133s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "66fb745102559f94",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0231_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.133s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3b5769f0a9348384",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0232_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "fcb025dbca5c7300",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0232_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c9d14461cbf1cca8",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0232_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4a7e07b005227943",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0233_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.7s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "fd0b67228498c8b6",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0233_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.7s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "faa9a0f38e4a2b89",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0233_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.7s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f34448f8cfe98a43",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0234_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.5s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "61b2b0113b411602",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0234_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.5s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "cb61480d352af150",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0234_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.5s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9453b9baee694ce8",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0235_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.85s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "acc76f26d5b3d722",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0235_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.85s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b4d3814a241c3dbe",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0235_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.85s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "dde921fc0924f8a3",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0236_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0d926f9aa7d9086b",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0236_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7efc2ea8533a2e18",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0236_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "269f1ac7ecb3cb77",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0237_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.333s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "be6276de06f93bcd",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0237_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.333s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9b1d5802d43a75ff",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0237_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=5.333s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "fcb602b2b0857b9f",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0238_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6365b0ec55153255",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0238_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "9a8019cfdf640088",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0238_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=4.1s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f38d7e6f1cd3b93c",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0238_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.5s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "61868c594fb198a9",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0238_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.5s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "bb0f4d2da2d6c023",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0238_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.5s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e4b4691a0844d330",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0238_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.2s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "759e8bbee2d5883c",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0238_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.2s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1c40bc530b0a6d3c",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0238_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.2s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2b1af372e68cf6c8",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0239_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.833s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "05b3cbaab2f3875d",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0239_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.833s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a01811775a5312d3",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0239_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.833s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2dcd31a328b2c887",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0242_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.4s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c251d0352242250e",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0242_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.4s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "69af51e115579722",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0242_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.4s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "40720b5ff58acaad",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0243_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.7s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "fb12e60ffb98e2c8",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0243_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.7s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3bfd1f26c30f4337",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0243_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=3.7s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "682a7fce03d19e36",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.2s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "b15b3afbafdbcb96",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.2s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7c13edf83f5e2fad",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_0.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=1.2s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f88dafd9a5428fc5",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.967s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "694d7d7905be7889",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.967s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ab99b313b70d723d",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_1.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.967s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d34a5b2d4e43b290",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.6s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "487accdc275c87f3",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.6s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e09d814a0058794a",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_2.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=6.6s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "def5531cf564be07",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_3.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8e883fea309eea9d",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_3.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian NOT intend to cross? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "51cece0c12db9ff5",
+      "task_type": "open_qa",
+      "video_id": "PSI_VQA/test/videos/ambiguous/video_0244_track_3.mp4",
+      "question": "The pedestrian marked with a red bounding box (visible at the start) is shown from t=0s to t=8s in this dashcam video. The annotators disagreed about the pedestrian's crossing intent.\n\nWhy might the pedestrian's crossing intent be uncertain? List the visual cues that support this judgment as a bulleted list. If there are no supporting cues, write \"None\".",
+      "answer": "",
+      "reasoning": ""
+    }
+  ]
+}

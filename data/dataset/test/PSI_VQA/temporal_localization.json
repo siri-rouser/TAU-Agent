@@ -1,0 +1,461 @@
+{
+  "format": "tao-vl-reason-v1.0",
+  "metadata": {
+    "type": "annotation",
+    "task": "temporal_localization",
+    "date": "2026-05-27",
+    "license": "TASI Benchmark Data Sharing Agreement (inherited from PSI_VQA/test/videos 2.0)",
+    "source": "PSI_VQA/test/videos 2.0 / PSI_VQA/test/videos 3.0 (NCSU Intelligent Cognitive Ergonomics Lab)"
+  },
+  "media_root": null,
+  "items": [
+    {
+      "item_index": "46242a7a89cabe21",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0205.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e76c41455ce202c7",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0206.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "6ac79dedb2530224",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0207.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3fa1bbb1c8952f0e",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0208.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ef1ffeccf8d36d1e",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0209_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4db5434d4282effd",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0209_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8b734045b2ec21b1",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0210.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "04cfb70a092b04bf",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0211_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "78a28088f3388d96",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0211_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "fe36683a5601f5cc",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0212_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ed24f15bdbf0e997",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0212_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "efc9fda65fd00482",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0213.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "47cf5ec57cfabbe3",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0214.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1ffa23c5a7bd9497",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0215.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "14b21f3713044be8",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0216.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "bda3d891b843b7b3",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0217.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ef3eec8067cfb562",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0218.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "ec3c55eabaca09ed",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0219.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "faeafc40c288010c",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0220.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8ad47124719c1007",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0221.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "5ad251b86f670b92",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0222.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "35b591e84f39c94c",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0223_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f36dc6f9ff37e941",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0223_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "49e45c23e01234f7",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0224_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "da6a322ca507063f",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0224_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c9823e7e85d23eff",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0225.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "317204294981d227",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0226.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "f60479e85f1f908d",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0227.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "dcff13021804f80e",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0228.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0c7a280a64ed9782",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0229.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "1101bf694222d807",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0230_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "c03fca0a666ffc11",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0230_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "69c59212385620ef",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0230_c2.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "188bb650e169422d",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0231_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "7a04fe9173ae5347",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0231_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "2f688ecee32decb4",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0232_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "231ab13d8189bd95",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0232_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4e468c1a47072820",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0233.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4a536f3945fcb382",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0234_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8593ee201a203f10",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0234_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3e2b7030e021b9a0",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0235.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "d323c88890649cdc",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0236_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3d3cb8ffa5ebc786",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0236_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e2ae436def9a5722",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0237.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "e81740bed620f453",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0238.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3389d975ec4696dc",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0239.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "a1c08d8d4ae5b120",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0240.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "11e3fb26244cf9cc",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0241.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "8610e4ccf6eb1a01",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0242_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "3c9c3b698df063c2",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0242_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "0e3edcb3a49c2a4b",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0243_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "499dd8c2f4638865",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0243_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "4dedbfecc4c51052",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0243_c2.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "237622cba9e534c0",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0244_c0.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "fea8e9aefb77c5cb",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0244_c1.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    },
+    {
+      "item_index": "86aa78d98d81a7b0",
+      "task_type": "temporal_localization",
+      "video_id": "PSI_VQA/test/videos/temporal/video_0244_c2.mp4",
+      "question": "You are watching an egocentric dashcam video recorded from the front of a moving car.\n\nIdentify the time interval during which a road user (such as a pedestrian, cyclist, or another vehicle) or a road factor (such as a traffic signal, sign, or road condition) most influences the driver's decision-making.\n\nAnswer with the start and end timestamps in the format {\"start\": \"MM:SS\", \"end\": \"MM:SS\"}.",
+      "answer": "",
+      "reasoning": ""
+    }
+  ]
+}

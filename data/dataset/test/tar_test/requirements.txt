@@ -1,0 +1,24 @@
+# Python dependencies for the AI City 2026 Track 3 TAR test set.
+#
+# Two distinct tools live in this directory:
+#   - download_test_videos.py  : fetches + trims the 80 YouTube source clips.
+#       Requires `yt-dlp` (here) and `ffmpeg` on PATH (system-installed; see
+#       the repo's main DOWNLOADING.md for installation instructions).
+#   - evaluate.py              : validates and scores a submission CSV.
+#       Requires numpy, pandas, and (for scoring open-ended tasks) bert_score,
+#       which transitively pulls in torch + transformers + tokenizers and
+#       downloads roberta-large (~1.4 GB) to ~/.cache/huggingface on first use.
+#
+# IMPORTANT - transformers must be pinned to 4.x. With transformers 5.x,
+# bert_score 0.3.12 loads roberta-large via a different code path and the
+# BERTScore-based metrics shift by up to ~0.02 absolute (a few % relative).
+# Non-BERTScore metrics (bcq/mcq/temporal_localization) are env-independent.
+
+# downloader
+yt-dlp>=2024.1.1
+
+# evaluator
+numpy>=1.24
+pandas>=2.0
+bert_score>=0.3.12
+transformers==4.57.0
