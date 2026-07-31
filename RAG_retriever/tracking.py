@@ -11,8 +11,13 @@ import sys
 import os
 import tempfile
 
+# Resolve paths relative to the repo root (parent of this RAG_retriever/ dir)
+# so everything works regardless of where the repo is cloned/mounted.
+_THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+_REPO_ROOT = os.path.dirname(_THIS_DIR)
+
 # Make GroundingDINO importable from its repo clone
-_GDINO_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "GroundingDINO")
+_GDINO_ROOT = os.path.join(_REPO_ROOT, "GroundingDINO")
 if _GDINO_ROOT not in sys.path:
     sys.path.insert(0, _GDINO_ROOT)
 
@@ -302,11 +307,11 @@ class Tracking:
         model_config: str,
         model_checkpoint: str,
         device: str = "cuda",
-        classifier_checkpoint: str = "/workspace/TAU-R1/RAG_retriever/last.pt",
-        dinov2_repo_path: str = "/workspace/TAU-R1/dinov2",
+        classifier_checkpoint: str = os.path.join(_THIS_DIR, "weights", "last.pt"),
+        dinov2_repo_path: str = os.path.join(_REPO_ROOT, "dinov2"),
         classifier_conf_threshold: float = 0.4,
         classifier_crop_padding: float = 0.15,
-        yolo_model_path: str = "/workspace/TAU-R1/RAG_retriever/yolo26x.pt",
+        yolo_model_path: str = os.path.join(_THIS_DIR, "weights", "yolo26x.pt"),
         yolo_coco_to_native: dict | None = None,
         yolo_native_to_coco: dict | None = None,
     ):

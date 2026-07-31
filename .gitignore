@@ -1,2 +1,6 @@
 /data/captions
 /data/RAG_Info
+/data/videos
+/RAG_retriever/weights
+note.txt
+/data/tracks

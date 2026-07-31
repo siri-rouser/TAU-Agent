@@ -1,0 +1,45 @@
+scene for 80 vids, temporal for 80 vids, causal for 80 vids, summary for 80 vids, open_qa for 80 vids
+Loading RAG evidence index...
+  960 evidence entries
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  2.10it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  2.08it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  2.04it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.38it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.25it/s]
+
+[mcq<->mcq_openended] 80 paired videos (mcq=80, mcq_openended=80); align-min-score=0.5; recheck-agreement=0.0; reconsider-vote=5/5 @ T=0.7
+  handing 17 suspicious fault/sequence pairs to the probe stage (--probe-fault)
+  [unify] shard 4/5: 7/63 videos
+
+[probe-fault] 17 suspicious of 48 eligible fault/sequence videos (agr<=0.8 or twins disagree); gate = 4/5 supermajority on BOTH twins + aligned agreement
+  [probe] shard 4/5: 4/17 videos
+qwen-vl-utils using torchcodec to read video.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  v=daabJK00Y88_3-08_3-18.mp4: probed facts:
+    An independent close inspection of this video reported the following observations (verify them against the video; they may contain errors):
+    - The two vehicles involved in the collision are a black SUV and a red sedan. The black SUV is traveling from the top of the frame toward the bottom in lane 4. The red sedan enters the frame from the bottom right and moves straight toward the top. The red sedan enters the intersection first and strikes the rear of the black SUV.
+    - Just before the collision, the traffic signals governing the bottom-to-top direction of travel (the black SUV and the red car) are green. In contrast, the traffic signals governing the top-to-bottom direction of travel are red. The collision occurred because the vehicles traveling from the top of the frame failed to stop for the red signal, violating the right-of-way of the vehicles proceeding on the green light.
+    mcq[ce759b1f1ec80572]: probe vote {'C': 5}
+    mcq_openended[af6b0b0141de5346]: probe vote {'B': 5}
+  v=daabJK00Y88_3-08_3-18.mp4: unanimous but twins disagree (mcq=C -> aligns to None, oe=B) -- left unchanged
+  v=daabJK00Y88_3-57_4-05.mp4: probed facts:
+    An independent close inspection of this video reported the following observations (verify them against the video; they may contain errors):
+    - The two vehicles involved in the collision are a white SUV and a black car. The white SUV is located at the top right corner of the frame, facing left, and is in the process of making a left turn. The black car enters the frame from the bottom right and is traveling straight toward the top left. The white SUV strikes the black car, hitting its front/rear end.
+    - At the time of the collision, the traffic signals facing the right-side approach (the direction from which the silver SUV is traveling) are green. The black car, traveling from the bottom of the frame, enters the intersection without yielding to the silver SUV, which is proceeding on a green light from the right. Therefore, the silver SUV is following the signal, while the black car fails to yield the right-of-way.
+    mcq[c8acee4d36e984ae]: probe vote {'C': 3, 'A': 2}
+    mcq_openended[635cda35d648a67c]: probe vote {'C': 4, 'D': 1}
+  v=daabJK00Y88_3-57_4-05.mp4: not unanimous on both twins -- left unchanged (mcq=A, oe=C)
+  v=ir8j5bGBTiE_0-32_0-40.mp4: probed facts:
+    An independent close inspection of this video reported the following observations (verify them against the video; they may contain errors):
+    - The two vehicles involved in the collision are a white sedan and a dark-colored sedan. The white sedan enters the frame from the left and travels straight toward the right. The dark-colored sedan enters the frame from the top and travels straight toward the bottom. The dark-colored sedan enters the intersection area first, and its front strikes the side or rear of the white sedan.
+    - At the time of the collision, the traffic signal facing the bottom-to-top flow (top right) is green, while the traffic signal facing the top-to-bottom flow (top left) is red. The white sedan, traveling from top to bottom, entered the intersection against a red light. The dark-colored sedan, traveling from bottom to top, had the right-of-way.
+    mcq[5c48d6ba200d010b]: probe vote {'B': 5}
+    mcq_openended[91a91c2758721536]: probe vote {'C': 2, 'A': 3}
+  v=ir8j5bGBTiE_0-32_0-40.mp4: not unanimous on both twins -- left unchanged (mcq=B, oe=A)
+  v=t7LIRV9VA8A_0-00_0-10.mp4: probed facts:
+    An independent close inspection of this video reported the following observations (verify them against the video; they may contain errors):
+    - The two vehicles involved in the collision are a white SUV and a black sedan. The white SUV enters the frame from the bottom right and moves toward the top left. The black sedan enters the frame from the bottom and moves toward the top. The white SUV enters the intersection/conflict area first and collides with the black sedan, striking the front of the sedan against the SUV's side/rear.
+    - There is one primary traffic signal visible in the scene, located on the left side of the frame facing the bottom-right approach. This signal is green for the entire duration of the video, granting the right-of-way to vehicles traveling from the bottom-right toward the top. Neither the white SUV nor the dark-colored car entered against a red signal; however, both vehicles failed to yield the right-of-way to one another, leading to the collision.
+    mcq[50074418d74fc174]: probe vote {'C': 2, 'B': 3}
+    mcq_openended[778f69ee11d5219f]: probe vote {'D': 4, 'C': 1}
+  v=t7LIRV9VA8A_0-00_0-10.mp4: not unanimous on both twins -- left unchanged (mcq=B, oe=C)
+
+Changed 0 items total
+Wrote /output/dp0_lowconf_fix_mcq_probe/predictions_mcq_fixed.shard4.jsonl

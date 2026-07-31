@@ -3,7 +3,7 @@ Parallel video captioning for all training videos referenced in an annotation
 JSON file (e.g. bcq.json).
 
 Usage (from inside the container, or locally with the same env vars set):
-    python RAG_retriever/caption_generation.py --data-json data/dataset/train/track3/bcq.json [--workers N] [--media-root /data]
+    python RAG_retriever/caption_generation.py --data-json data/dataset/train/track3/bcq.json [--workers N] [--media-root data/videos]
 
 For datasets that have no question/annotation JSON file to source a video list
 from (e.g. FETV), pass --video-dir pointing at the directory of videos instead
@@ -29,6 +29,12 @@ if _HERE not in sys.path:
 
 from captioning import Captioning
 
+# Resolve paths relative to the repo root (parent of this RAG_retriever/ dir)
+# so everything works regardless of where the repo is cloned/mounted.
+_REPO_ROOT = os.path.dirname(_HERE)
+DEFAULT_MEDIA_ROOT = os.path.join(_REPO_ROOT, "data", "videos")
+DEFAULT_CAPTIONS_BASE_DIR = os.path.join(_REPO_ROOT, "data", "captions")
+
 # ── helpers ──────────────────────────────────────────────────────────────────
 
 _print_lock = threading.Lock()
@@ -39,6 +45,21 @@ def safe_print(*args, **kwargs):
         print(*args, **kwargs, flush=True)
 
 
+def _dataset_rel_path(path_str):
+    """Strip an absolute video path down to its dataset-relative portion.
+
+    Videos live under .../data/videos/<dataset>/...; captions are organized
+    as .../data/captions/<agent>/<dataset>/... (no "videos" segment). Strip
+    through the first "data/videos/" if present (current layout), else the
+    first "data/" (legacy layout without a videos/ subdir).
+    """
+    for anchor in ("data/videos/", "data/"):
+        idx = path_str.find(anchor)
+        if idx != -1:
+            return path_str[idx + len(anchor):]
+    return path_str.lstrip("/")
+
+
 def caption_output_path(video_path: str, captioning_agent: str, base_dir: str) -> str:
     """Return the expected output JSON path for a given video."""
     subdir_map = {
@@ -46,7 +67,7 @@ def caption_output_path(video_path: str, captioning_agent: str, base_dir: str) -
         "Gemini35Flash": "gemini35",
     }
     model_subdir = subdir_map.get(captioning_agent, "default")
-    rel = video_path.split("/data")[-1].replace(".mp4", ".json").lstrip("/")
+    rel = _dataset_rel_path(video_path).replace(".mp4", ".json")
     return os.path.join(base_dir, model_subdir, rel)
 
 
@@ -86,9 +107,9 @@ def main():
     parser.add_argument("--video-dir", default=None,
                         help="Directory to glob *.mp4 files from directly, for datasets with no "
                              "--data-json. (default: %(default)s)")
-    parser.add_argument("--media-root", default="/data",
+    parser.add_argument("--media-root", default=DEFAULT_MEDIA_ROOT,
                         help="Root directory where video datasets live (default: %(default)s)")
-    parser.add_argument("--base-dir", default="/data/captions",
+    parser.add_argument("--base-dir", default=DEFAULT_CAPTIONS_BASE_DIR,
                         help="Output base directory for caption JSONs (default: %(default)s)")
     parser.add_argument("--agent", default="Gemini35Flash",
                         choices=["Gemini35Flash", "Gemini31pro"],

@@ -3,10 +3,32 @@ import json
 import cv2
 from tracking import Tracking
 
-GDINO_CONFIG = "/workspace/TAU-R1/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
-GDINO_CHECKPOINT = "/workspace/TAU-R1/GroundingDINO/weights/groundingdino_swint_ogc.pth"
-CAPTIONS_BASE_DIR = "/data/captions"
+# Resolve paths relative to the repo root (parent of this RAG_retriever/ dir)
+# so everything works regardless of where the repo is cloned/mounted.
+_THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+_REPO_ROOT = os.path.dirname(_THIS_DIR)
+
+GDINO_CONFIG = os.path.join(_REPO_ROOT, "GroundingDINO", "groundingdino", "config", "GroundingDINO_SwinT_OGC.py")
+GDINO_CHECKPOINT = os.path.join(_REPO_ROOT, "GroundingDINO", "weights", "groundingdino_swint_ogc.pth")
+CAPTIONS_BASE_DIR = os.path.join(_REPO_ROOT, "data", "captions")
+TRACKS_BASE_DIR = os.path.join(_REPO_ROOT, "data", "tracks")
 SECONDS_PER_CAPTION = 2
+
+
+def _dataset_rel_path(path_str):
+    """Strip an absolute video/track path down to its dataset-relative portion.
+
+    Videos live under .../data/videos/<dataset>/..., while captions/tracks are
+    organized as .../data/<captions|tracks>/.../<dataset>/... (no "videos"
+    segment). Strip through the first "data/videos/" if present (current
+    layout), else the first "data/" (legacy layout without a videos/ subdir).
+    """
+    for anchor in ("data/videos/", "data/"):
+        idx = path_str.find(anchor)
+        if idx != -1:
+            return path_str[idx + len(anchor):]
+    return path_str.lstrip("/")
+
 
 class Toolkit:
     def __init__(self, video_path, captioning_agent=None, tracker=None, task_type=None):
@@ -23,7 +45,7 @@ class Toolkit:
         captions_root = os.path.join(CAPTIONS_BASE_DIR, model_subdir)
 
         # Derive caption JSON path using the same logic as Captioning._get_output_path
-        rel = video_path.split("/data")[-1].replace(".mp4", ".json").lstrip("/")
+        rel = _dataset_rel_path(video_path).replace(".mp4", ".json")
         caption_path = os.path.join(captions_root, rel)
 
         # Load captions and build an ordered list for index-based access
@@ -96,8 +118,8 @@ class Toolkit:
         if not prompts:
             return "No valid query provided."
 
-        rel = self.video_path.split("/data")[-1].replace(".mp4", "").lstrip("/")
-        save_dir = os.path.join("/data/tracks", rel)
+        rel = _dataset_rel_path(self.video_path).replace(".mp4", "")
+        save_dir = os.path.join(TRACKS_BASE_DIR, rel)
 
         def _save_path(prompt):
             safe_prompt = prompt.replace(" ", "_")[:80]
@@ -187,10 +209,8 @@ class Toolkit:
             print("task_type not set for ground truth retrieval")
             return None
         
-        # Construct path relative to this file's location
-        dataset_dir = os.path.normpath(
-            os.path.join(os.path.dirname(__file__), "..", "dataset", "train_backup")
-        )
+        # Ground-truth annotation JSONs live under data/dataset/train/track3.
+        dataset_dir = os.path.join(_REPO_ROOT, "data", "dataset", "train", "track3")
         question_json = os.path.join(dataset_dir, f"{self.task_type}.json")
         
         if not os.path.exists(question_json):
@@ -212,9 +232,9 @@ class Toolkit:
     
 
 
-class ToolkitStage2:
+class ToolkitStage2_trainset:
     def __init__(self, video_id,video_path):
-        self.annotation_path = "/workspace/TAU-R1/dataset/train"
+        self.annotation_path = os.path.join(_REPO_ROOT, "data", "dataset", "train", "track3")
         self.video_id = video_id
         self.video_path = video_path
         self.time_task_group = ["causal_linkage", "temporal_description"]
@@ -222,7 +242,6 @@ class ToolkitStage2:
         cap = cv2.VideoCapture(video_path)
         self.fps = round(cap.get(cv2.CAP_PROP_FPS))
         cap.release()
-
 
     def get_question_info(self):
         info = ""
@@ -261,7 +280,7 @@ class ToolkitStage2:
 
 class ToolkitStage2_testset:
     def __init__(self, video_id, video_path):
-        self.annotation_path = "/workspace/TAU-R1/dataset/test/tar_test"
+        self.annotation_path = os.path.join(_REPO_ROOT, "data", "dataset", "test", "tar_test")
         self.video_id = video_id
         self.video_path = video_path
         self.time_task_group = ["causal_linkage", "temporal_description"]
@@ -292,32 +311,4 @@ class ToolkitStage2_testset:
             task = item.get("task_type", "")
             if task in self.time_task_group:
                 info += f"{task} task with question: {item.get('question')}\n"
-        return info
-    
-
-class ToolkitStage2_PSI:
-    def __init__(self, video_id,video_path):
-        self.annotation_path = "/workspace/TAU-R1/dataset/train_PSI_VQA"
-        self.video_id = video_id
-        self.video_path = video_path
-        self.info_task_group = ["bcq", "mcq", "open_qa", "temporal_localization"]
-        cap = cv2.VideoCapture(video_path)
-        self.fps = round(cap.get(cv2.CAP_PROP_FPS))
-        cap.release()
-
-    def get_question_info(self):
-        info = f"fps: {self.fps}\n"
-
-        for task in self.info_task_group:
-            question_json = os.path.join(self.annotation_path, f"{task}.json")
-            if not os.path.exists(question_json):
-                print(f"Ground truth JSON file not found: {question_json}")
-                continue
-            
-            with open(question_json, "r") as f:
-                data = json.load(f)
-            
-            for item in data.get("items", []):
-                if item.get("video_id") == self.video_id:
-                    info += f"{task} task with question: {item.get('question')}\n"
         return info

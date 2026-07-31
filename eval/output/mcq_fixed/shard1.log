@@ -1,0 +1,61 @@
+scene for 80 vids, temporal for 80 vids, causal for 80 vids, summary for 80 vids, open_qa for 80 vids
+Loading RAG evidence index...
+  960 evidence entries
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.89it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.96it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.96it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.33it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.17it/s]
+
+[mcq<->mcq_openended] 80 paired videos (mcq=80, mcq_openended=80); align-min-score=0.5; recheck-agreement=0.0; reconsider-vote=5/5 @ T=0.7
+  handing 17 suspicious fault/sequence pairs to the probe stage (--probe-fault)
+  [unify] shard 1/5: 16/63 videos
+qwen-vl-utils using torchcodec to read video.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  v=CRFFj83OIDU_0-00_0-20.mp4: reconsider vote -> mcq[72961fe0b8dcd58b]=D {'D': 5} (was D), mcq_openended[6dddc9a33131626e]=C {'C': 5} (was C) [None = inconclusive: neither confirmed nor 5/5 for a change]
+  v=CRFFj83OIDU_0-00_0-20.mp4: still disagree, pooled fresh vote tied ({'D': 5}) and vote_agreement tied (1.0) -- pair left unchanged
+
+[probe-fault] 17 suspicious of 48 eligible fault/sequence videos (agr<=0.8 or twins disagree); gate = 4/5 supermajority on BOTH twins + aligned agreement
+  [probe] shard 1/5: 6/17 videos
+  v=-3nwOfm1Pdk_0-00_0-16.mp4: probed facts:
+    An independent close inspection of this video reported the following observations (verify them against the video; they may contain errors):
+    - The two vehicles involved in the collision are a white van and a dark blue hatchback. The white van enters from the bottom of the frame and travels straight toward the top of the frame. The dark blue hatchback enters from the right side of the frame and travels straight toward the left. The white van enters the intersection area first and strikes the side/rear of the dark blue hatchback.
+    - For the white van traveling from the bottom of the frame toward the top, the traffic signal facing its direction of travel is green. For the dark blue hatchback entering from the right, there are no visible traffic signals governing its specific approach in the frame. The white van had the right-of-way, while the dark blue hatchback failed to yield the right-of-way before entering the intersection.
+    mcq[fcc257a9dfd308b8]: probe vote {'B': 5}
+    mcq_openended[b87aed2fa70c0a9c]: probe vote {'D': 5}
+  v=-3nwOfm1Pdk_0-00_0-16.mp4: unanimously re-confirmed current answers (mcq=B, oe=D) -- no change
+  v=5DDCGYWEpeQ_0-10_0-25.mp4: probed facts:
+    An independent close inspection of this video reported the following observations (verify them against the video; they may contain errors):
+    - The two vehicles involved in the collision are a dark-colored sedan and a dark-colored SUV. The dark-colored sedan enters the frame from the top and travels straight toward the bottom of the frame in the rightmost lane. The dark-colored SUV enters the frame from the bottom right and is moving toward the top. The sedan enters the conflict area first and strikes the side/rear of the SUV with its front end.
+    - At the time of the collision, the traffic signal facing the dark grey sedan's direction of travel (bottom of the frame) was red, while the traffic signal facing the silver sedan's direction of travel (top of the frame) was green. The dark grey sedan entered the intersection against a red light, failing to yield the right-of-way to the silver sedan, which was proceeding lawfully on a green light.
+    mcq[31a973a57c0e61b9]: probe vote {'B': 5}
+    mcq_openended[bb3d653f01f60479]: probe vote {'D': 5}
+  v=5DDCGYWEpeQ_0-10_0-25.mp4: unanimous but twins disagree (mcq=B -> aligns to None, oe=D) -- left unchanged
+  v=6h83x_IeLjc_0-00_0-10.mp4: probed facts:
+    An independent close inspection of this video reported the following observations (verify them against the video; they may contain errors):
+    - The two vehicles involved in the collision are a dark-colored sedan and a blue SUV. The dark-colored sedan enters the frame from the left and moves toward the right, while the blue SUV enters from the top and moves straight toward the bottom. The blue SUV strikes the side or rear of the dark-colored sedan. The blue SUV is the vehicle that strikes the other.
+    - Before the collision, the traffic signals governing the top-to-bottom direction of travel were red, while the signals governing the bottom-to-top direction were green. The blue sedan and the black SUV, both traveling from the top of the frame toward the bottom, entered the intersection against a red light, failing to yield the right-of-way to the cross traffic.
+    mcq[8dbd0d62b826d9f4]: probe vote {'C': 3, 'A': 2}
+    mcq_openended[68077680b510cb32]: probe vote {'D': 3, 'A': 2}
+  v=6h83x_IeLjc_0-00_0-10.mp4: not unanimous on both twins -- left unchanged (mcq=A, oe=D)
+  v=lAOifjTeelM_2-49_2-56.mp4: probed facts:
+    An independent close inspection of this video reported the following observations (verify them against the video; they may contain errors):
+    - The two vehicles involved in the collision are a dark-colored sedan and a white sedan. The dark-colored sedan is traveling from the bottom of the frame toward the top in lane 5. The white sedan enters the scene from the right side of the frame, moving toward the left. The white sedan enters the intersection and the conflict area first, failing to yield the right-of-way to the dark-colored sedan, which results in the front of the white sedan striking the side or rear of the dark-colored sedan.
+    - The traffic signals governing the flow of traffic moving from the bottom of the frame toward the top are green throughout the sequence. The dark grey sedan involved in the collision is traveling in this direction and has the right-of-way. The pedestrian who is struck is crossing against the signal, violating the right-of-way of the oncoming vehicle.
+    mcq[bf54351310f4d7b9]: probe vote {'B': 5}
+    mcq_openended[b0cc945792a5715a]: probe vote {'C': 1, 'A': 4}
+  v=lAOifjTeelM_2-49_2-56.mp4: unanimously re-confirmed current answers (mcq=B, oe=A) -- no change
+  v=owY0Fg-1Yhk_2-25_2-35.mp4: probed facts:
+    An independent close inspection of this video reported the following observations (verify them against the video; they may contain errors):
+    - The two vehicles involved in the collision are a black sedan and a red SUV. The black sedan enters the scene from the left side of the frame and moves toward the intersection. The red SUV enters from the bottom of the frame and drives straight into the intersection. The red SUV strikes the black sedan, hitting the front of the sedan against the side/rear of the SUV. The red SUV is the vehicle that enters the intersection first.
+    - Before the collision, the traffic signal governing the direction of the red hatchback (traveling from the bottom of the frame) is green. Conversely, the traffic signal governing the direction of the dark sedan (traveling from the left of the frame) is red. The dark sedan entered the intersection against a red light, failing to yield the right-of-way to the red hatchback.
+    mcq[60613afd4bb27221]: probe vote {'D': 4, 'B': 1}
+    mcq_openended[008db65b90a4e5c3]: probe vote {'D': 4, 'C': 1}
+  v=owY0Fg-1Yhk_2-25_2-35.mp4: unanimously re-confirmed current answers (mcq=D, oe=D) -- no change
+  v=t7LIRV9VA8A_1-45_1-48.mp4: probed facts:
+    An independent close inspection of this video reported the following observations (verify them against the video; they may contain errors):
+    - The two vehicles involved in the collision are a white SUV and a dark-colored sedan. The white SUV enters the frame from the top and travels straight toward the bottom of the frame. The dark-colored sedan enters the frame from the right and moves toward the left. The white SUV enters the intersection first, and the front of the dark-colored sedan strikes the side or rear of the white SUV.
+    - At the time of the collision, the traffic signal governing the white SUV's direction of travel (top to bottom) was red. Conversely, the traffic signal governing the direction of the dark-colored car (right to left) was green. The white SUV entered the intersection against a red light, failing to yield the right-of-way to the dark-colored car which had the right-of-way.
+    mcq[d84db180189dac27]: probe vote {'C': 5}
+    mcq_openended[98c7394d9d970a4b]: probe vote {'D': 1, 'C': 4}
+  v=t7LIRV9VA8A_1-45_1-48.mp4: unanimously re-confirmed current answers (mcq=C, oe=C) -- no change
+
+Changed 0 items total
+Wrote /output/dp0_lowconf_fix_mcq_probe/predictions_mcq_fixed.shard1.jsonl

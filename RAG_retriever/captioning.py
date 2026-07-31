@@ -7,10 +7,32 @@ import time
 from prompt_library import prompt_lib
 import requests
 
+# Resolve paths relative to the repo root (parent of this RAG_retriever/ dir)
+# so everything works regardless of where the repo is cloned/mounted.
+_THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+_REPO_ROOT = os.path.dirname(_THIS_DIR)
+DEFAULT_CAPTIONS_BASE_DIR = os.path.join(_REPO_ROOT, "data", "captions")
+
+
+def _dataset_rel_path(path_str):
+    """Strip an absolute video path down to its dataset-relative portion.
+
+    Videos live under .../data/videos/<dataset>/...; captions are organized
+    as .../data/captions/<agent>/<dataset>/... (no "videos" segment). Strip
+    through the first "data/videos/" if present (current layout), else the
+    first "data/" (legacy layout without a videos/ subdir).
+    """
+    for anchor in ("data/videos/", "data/"):
+        idx = path_str.find(anchor)
+        if idx != -1:
+            return path_str[idx + len(anchor):]
+    return path_str.lstrip("/")
+
 
 class Captioning:
-    def __init__(self, video_path_list, base_dir="/data/captions", captioning_agent=None, api_key=None,
+    def __init__(self, video_path_list, base_dir=None, captioning_agent=None, api_key=None,
                  dataset="default"):
+        base_dir = base_dir or DEFAULT_CAPTIONS_BASE_DIR
         self.prompts = prompt_lib()
         self.captioning_agent = captioning_agent
         self.video_path_list = video_path_list
@@ -36,7 +58,7 @@ class Captioning:
 
     def _get_output_path(self, video_path):
         """Mirror the source path structure under base_dir, replacing .mp4 with .json."""
-        rel = video_path.split("/data")[-1].replace(".mp4", ".json").lstrip("/")
+        rel = _dataset_rel_path(video_path).replace(".mp4", ".json")
         return os.path.join(self.base_dir, rel)
 
     def _extract_frames(self, cap, fps, caption_id):

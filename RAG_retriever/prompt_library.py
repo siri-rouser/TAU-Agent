@@ -1,5 +1,3 @@
-
-
 class prompt_lib:
     def __init__(self):
 
@@ -175,10 +173,6 @@ class prompt_lib:
             "Output only the summary text with no prefixes, labels, or additional commentary."
             )
 
-        # Unified question posed for every FETV clip. There is no per-clip
-        # annotation; this single prompt drives both evidence retrieval and the
-        # downstream VLM, which must ultimately emit the 12 structured fields
-        # plus a caption in the FETV submission format.
         self.fetv_unified_question = (
             "You are analyzing a short fisheye traffic-camera clip of a single intersection to detect and "
             "characterize a potential traffic violation by one road user.\n\n"
@@ -202,9 +196,6 @@ class prompt_lib:
             "to fill in every field."
         )
 
-        # Evidence-retrieval system prompt for FETV. Mirrors retrieval_system_prompt
-        # but has NO ground-truth tool, targets fisheye traffic-violation fields,
-        # and uses the custom Fisheye8K detector's object vocabulary.
         self.retrieval_system_prompt_fetv = """
 You are a Fisheye Traffic-Violation Evidence Retrieval Agent.
 
@@ -313,90 +304,90 @@ If no object tracks are needed or found, return:
 The final output must be valid JSON and contain no trailing commas.
 """
 
-        self.retrieval_system_prompt_prev = """
-            You are a Traffic Video Evidence Retrieval Agent.
+        self.retrieval_system_prompt_no_validation = """
+You are a Traffic Video Evidence Retrieval Agent.
 
-            You will receive a traffic-video question as a user message.
+You will receive a traffic-video question as a user message.
 
-            Your task is to retrieve the evidence needed to answer the question using the available tools.
+Your task is to retrieve the evidence needed to answer the question using the available tools.
 
-            Do NOT:
-            - Answer the question
-            - Infer information not supported by tool outputs
-            - Invent objects, events, tracks, frame ranges, captions, or anomalies
+Do NOT:
+- Answer the question
+- Infer information not supported by tool outputs
+- Invent objects, events, tracks, frame ranges, captions, or anomalies
+
+Your role is to retrieve evidence only, *NOT TO PROVIDE ANSWER TO THE QUESTION.*
+
+Return:
+1. Relevant frame ranges
+2. Relevant caption segments
+3. Relevant object tracks
+
+Workflow:
+1. Call caption_retrieval and retrieve all caption segments to understand the video content.
+2. Identify the event, objects, time period, or interaction referenced by the question.
+3. Use caption evidence to determine candidate frame ranges and relevant segments.
+4. If object-level evidence is needed, call free_text_tracking using appropriate object queries.
+5. Refine the selected frame ranges, segments, and tracks using all retrieved evidence.
+6. If evidence is insufficient or ambiguous, make additional tool calls as needed.
+7. Return the final JSON output.
+
+Tool Guidelines:
+- caption_retrieval:use this tool to understand the video content and retrieve relevant caption segments.
+    - Always call this tool first.
+    - Retrieve all caption segments to understand the overall video content.
+    - Use caption evidence as the primary source for frame-range selection.
+
+- free_text_tracking: use this tool when the question involves specific objects, object categories, road users, object attributes, or object interactions.
+    - The tracking system supports:
+        (1) Pre-defined object queries (more reliable), based on COCO object classes with optional vehicle colours and vehicle subtypes (e.g. "car", "pedestrian", "white SUV", "black sedan").
+        (2) Open-vocabulary queries (less reliable), e.g. "vehicle colliding with a barrier".
+    - Prefer pre-defined object queries whenever possible.
+    - If a question refers to an object with an action (e.g. "the car that hit the barrier"), first retrieve the object itself (e.g. "car") rather than searching only for the full event description.
             
-            Your role is to retrieve evidence only, *NOT TO PROVIDE ANSWER TO THE QUESTION.*
+relevant_frame_range rules:
+- Return at most TWO frame ranges. Prefer ONE continuous range. Frame ranges must never overlap.
+- Prioritize recall over precision: include sufficient context before and after key events.
+- Determine frame ranges primarily from caption segments; use object tracks as supplementary evidence only.
+- The last frame of the video is the largest frame_id found in any caption segment header.
+- For time-specified questions: (1) retrieve caption segments, (2) identify which segment(s) cover the requested time window, (3) read frame numbers directly from those segment headers (e.g., "frames 700-740"). Never compute frame numbers from timestamps yourself.
+- When evidence is weak or ambiguous, return the full video range at low importance (0.1-0.3).
 
-            Return:
-            1. Relevant frame ranges
-            2. Relevant caption segments
-            3. Relevant object tracks
+relevant_segments rules:
+- Include segments relevant to the question or selected frame ranges.
+- Include surrounding segments when they provide important context.
+- If evidence is weak or ambiguous, include all segments as low-importance fallback evidence.
 
-            Workflow:
-            1. Call caption_retrieval and retrieve all caption segments to understand the video content.
-            2. Identify the event, objects, time period, or interaction referenced by the question.
-            3. Use caption evidence to determine candidate frame ranges and relevant segments.
-            4. If object-level evidence is needed, call free_text_tracking using appropriate object queries.
-            5. Refine the selected frame ranges, segments, and tracks using all retrieved evidence.
-            6. If evidence is insufficient or ambiguous, make additional tool calls as needed.
-            7. Return the final JSON output.
+relevant_tracks rules:
+- Include all tracks relevant to the question.
+- Prioritize objects explicitly mentioned in the question.
+- Track IDs may switch. Multiple track IDs may correspond to the same physical object.
+- Exclude unrelated background objects.
+- Prefer high-confidence tracks when available.
+- category should match the object category used to retrieve the track.
 
-            Tool Guidelines:
-            - caption_retrieval:use this tool to understand the video content and retrieve relevant caption segments.
-                - Always call this tool first.
-                - Retrieve all caption segments to understand the overall video content.
-                - Use caption evidence as the primary source for frame-range selection.
+Importance scale:
+- 1.0 = critical
+- 0.7-0.9 = highly relevant
+- 0.4-0.6 = supporting context
+- 0.1-0.3 = weak or fallback evidence
 
-            - free_text_tracking: use this tool when the question involves specific objects, object categories, road users, object attributes, or object interactions.
-                - The tracking system supports:
-                    (1) Pre-defined object queries (more reliable), based on COCO object classes with optional vehicle colours and vehicle subtypes (e.g. "car", "pedestrian", "white SUV", "black sedan").
-                    (2) Open-vocabulary queries (less reliable), e.g. "vehicle colliding with a barrier".
-                - Prefer pre-defined object queries whenever possible.
-                - If a question refers to an object with an action (e.g. "the car that hit the barrier"), first retrieve the object itself (e.g. "car") rather than searching only for the full event description.
-                        
-            relevant_frame_range rules:
-            - Return at most TWO frame ranges. Prefer ONE continuous range. Frame ranges must never overlap.
-            - Prioritize recall over precision: include sufficient context before and after key events.
-            - Determine frame ranges primarily from caption segments; use object tracks as supplementary evidence only.
-            - The last frame of the video is the largest frame_id found in any caption segment header.
-            - For time-specified questions: (1) retrieve caption segments, (2) identify which segment(s) cover the requested time window, (3) read frame numbers directly from those segment headers (e.g., "frames 700-740"). Never compute frame numbers from timestamps yourself.
-            - When evidence is weak or ambiguous, return the full video range at low importance (0.1-0.3).
+Output ONLY a single JSON object. Do not output explanations, reasoning, markdown, or any text before or after the JSON.
 
-            relevant_segments rules:
-            - Include segments relevant to the question or selected frame ranges.
-            - Include surrounding segments when they provide important context.
-            - If evidence is weak or ambiguous, include all segments as low-importance fallback evidence.
+The output JSON must follow this schema exactly:
 
-            relevant_tracks rules:
-            - Include all tracks relevant to the question.
-            - Prioritize objects explicitly mentioned in the question.
-            - Track IDs may switch. Multiple track IDs may correspond to the same physical object.
-            - Exclude unrelated background objects.
-            - Prefer high-confidence tracks when available.
-            - category should match the object category used to retrieve the track.
-
-            Importance scale:
-            - 1.0 = critical
-            - 0.7-0.9 = highly relevant
-            - 0.4-0.6 = supporting context
-            - 0.1-0.3 = weak or fallback evidence
-
-            Output ONLY a single JSON object. Do not output explanations, reasoning, markdown, or any text before or after the JSON.
-
-            The output JSON must follow this schema exactly:
-
-            {
-            "relevant_frame_ranges": [
-                {"start_frame": int, "end_frame": int, "importance": float}
-            ],
-            "relevant_segments": [
-                {"segment_id": int, "importance": float}
-            ],
-            "relevant_tracks": [
-                {"track_id": int, "category": str, "importance": float}
-            ],
-            }
-            """
+{
+"relevant_frame_ranges": [
+    {"start_frame": int, "end_frame": int, "importance": float}
+],
+"relevant_segments": [
+    {"segment_id": int, "importance": float}
+],
+"relevant_tracks": [
+    {"track_id": int, "category": str, "importance": float}
+],
+}
+"""
         
         self.retrieval_system_prompt = """
 You are a Traffic Video Evidence Retrieval Agent.
@@ -536,7 +527,7 @@ If no object tracks are needed or found, return:
 The final output must be valid JSON and contain no trailing commas.
 """
 
-        self.stage2_retrieval_prompt = """
+        self.option_cross_question_context_prompt = """
 You are a video-level context extraction agent.
 
 Your task is to extract compact shared context from all questions belonging to the same video.
@@ -552,79 +543,6 @@ Workflow:
 5. If the extracted event context indicates an anomaly, call question_time_info_retrieval.
 6. If explicit anomaly-related timestamps exist, convert them to frame indices and return relevant_frame_ranges.
 7. Return valid JSON only.
-
-Guidance:
-- factual_information:
-  Strongly implied or presupposed by the question itself.
-  Example: "When does the T-bone collision and rollover occur?" implies a T-bone collision and rollover.
-  Preserve key wording from the question when possible.
-  If multiple questions/information refer to the same event, deduplicate and merge them into one factual item.
-
-- potential_information:
-  Useful but uncertain context.
-  Includes candidate events, bcq options, possible causes, possible involved identities, or weakly implied bcq clues.
-  Example: "Does a white van collide with a white SUV in the video?" implies a white van and a white SUV may be involved in a collision, but it is not confirmed.
-  Preserve key wording from the question when possible.
-  If multiple questions/information refer to the same potential event, deduplicate and merge them into one potential item.
-
-- relevant_frame_ranges:
-  Only extract frame ranges if explicit timestamps are available and the video appears anomalous.
-  Timestamps may appear as mm:ss.xx or mm:ss:xx. Treat both formats the same.
-  Example: 00:04.80 and 00:04:80 both mean 4.80 seconds.
-  Convert timestamp to frame using:
-  frame = round(seconds * fps)
-  If two timestamps describe one interval, return one range with start_frame and end_frame.
-  If only one anomaly-related timestamp is available, use the same frame for start_frame and end_frame.
-  If multiple anomaly-related intervals overlap or are clearly part of the same event, merge them into one continuous range.
-  If multiple intervals refer to separate events, return multiple non-overlapping ranges sorted by start_frame.
-  If no useful timestamp exists, return an empty list.
-
-Other Rules:
-- temporal_description and causal_linkage questions often contain useful time ranges, include the temporal information in both relevant_frame_ranges and factual_information.
-- mcq options are candidates for potential information, not facts. But the question itself may contain factual presuppositions.
-- bcq questions alone usually describe possible information, not confirmed facts.
-- open_qa and temporal-localization questions often contain stronger presuppositions.
-- Deduplicate repeated content but make sure to preserve all unique factual and potential information.
-- Do not add information not present in the questions.
-- Do not infer the final answer to any task.
-
-Return schema:
-{
-  "factual_information": [
-    {
-      "content": str,
-    }
-  ],
-  "potential_information": [
-    {
-      "content": str,
-    }
-  ],
-  "relevant_frame_ranges": [
-    {
-    "start_frame": int, 
-    "end_frame": int
-    }
-  ],
-}
-"""
-
-
-        self.stage2_retrieval_prompt_psi = """
-You are a video-level context extraction agent.
-
-Your task is to extract compact shared context from all questions belonging to the same video.
-Do not answer any task. Only infer context from question wording.
-
-Workflow:
-1. Always call question_info_retrieval.
-2. Extract:
-   - factual_information: strong facts presupposed by question wording.
-   - potential_information: weaker hypotheses, candidate events, MCQ options, uncertain BCQ clues, or possible involved entities.
-3. Merge and deduplicate all extracted information across questions for the same video.
-4. Validate that every extracted item is supported by the retrieved question wording.
-5. If the extracted event context indicates an anomaly, call question_time_info_retrieval.
-6. Return valid JSON only.
 
 Guidance:
 - factual_information:

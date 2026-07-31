@@ -1,0 +1,21 @@
+{
+  "n_official_items": 960,
+  "n_predicted": 960,
+  "n_missing_from_rag": 0,
+  "n_empty_predictions": 0,
+  "task_counts": {
+    "bcq": 160,
+    "bcq_openended": 160,
+    "causal_linkage": 80,
+    "mcq": 80,
+    "mcq_openended": 80,
+    "open_qa": 80,
+    "scene_description": 80,
+    "temporal_description": 80,
+    "temporal_localization": 80,
+    "video_summarization": 80
+  },
+  "submission_csv": "eval/aicity_test/submission_rag_test_20260730_111613.csv",
+  "prediction_file": "eval/aicity_test/predictions/rag_test_predictions.jsonl",
+  "timestamp": "2026-07-30 11:16:13"
+}

@@ -1,0 +1,17 @@
+{
+  "n_clips": 200,
+  "n_predicted": 200,
+  "n_defaulted": 0,
+  "violation_type_counts": {
+    "wrong_way": 66,
+    "lane_use_control": 7,
+    "jaywalking": 16,
+    "uturn": 24,
+    "no_violation": 77,
+    "red_light": 6,
+    "lane_discipline": 4
+  },
+  "submission_json": "/workspace/TAU-R1/eval_FETV/output_fetv/submission_fetv_20260710_082206.json",
+  "merged_prediction_file": "/workspace/TAU-R1/eval_FETV/output_fetv/predictions/fetv_predictions.jsonl",
+  "timestamp": "2026-07-10 08:22:06"
+}

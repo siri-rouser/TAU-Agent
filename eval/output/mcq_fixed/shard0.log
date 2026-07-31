@@ -1,0 +1,15 @@
+scene for 80 vids, temporal for 80 vids, causal for 80 vids, summary for 80 vids, open_qa for 80 vids
+Loading RAG evidence index...
+  960 evidence entries
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  2.01it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  2.06it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  2.06it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.44it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.28it/s]
+
+[mcq<->mcq_openended] 80 paired videos (mcq=80, mcq_openended=80); align-min-score=0.5; recheck-agreement=0.0; reconsider-vote=5/5 @ T=0.7
+  handing 17 suspicious fault/sequence pairs to the probe stage (--probe-fault)
+  [unify] shard 0/5: 15/63 videos
+
+[probe-fault] 17 suspicious of 48 eligible fault/sequence videos (agr<=0.8 or twins disagree); gate = 4/5 supermajority on BOTH twins + aligned agreement
+  [probe] shard 0/5: 0/17 videos
+
+Changed 0 items total
+Wrote /output/dp0_lowconf_fix_mcq_probe/predictions_mcq_fixed.shard0.jsonl
