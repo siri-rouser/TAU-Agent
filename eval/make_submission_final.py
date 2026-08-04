@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
-"""Combine predictions_mcq_fixed.jsonl and predictions_freetext_consensus.jsonl
-into a single submission CSV (item_index,prediction), ordered by test.json.
+"""Combine closed-task and free-text prediction records into one submission CSV.
 
-- bcq, mcq, bcq_openended, mcq_openended come from predictions_mcq_fixed.jsonl
-- everything else (causal_linkage, open_qa, scene_description,
-  temporal_description, temporal_localization, video_summarization) comes
-  from predictions_freetext_consensus.jsonl
+Rows follow the order and item indexes in the official test data.
 """
 import argparse
 import csv

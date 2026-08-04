@@ -1,25 +1,14 @@
 #!/usr/bin/env python3
-"""
-Evaluation script for AICity Challenge 2026 Track 3
-(nvidia/PhysicalAI-Traffic-Anomaly-Reasoning test split).
+"""Shared inference and answer-parsing helpers for AICity evaluation scripts.
 
-Task → metric mapping
+Task-to-metric mapping:
   mcq, mcq_openended          → F1 (macro), AP (macro-averaged precision)
   bcq, bcq_openended          → F1 (binary), AP (binary precision)
   temporal_localization        → mean IoU
   open_qa, causal_linkage,
   scene_description,
   temporal_description,
-  video_summarization          → BLEU, ROUGE-L, METEOR
-
-Usage (inside container):
-  cd train
-  python ../eval/eval_aicity.py \\
-      --model-dir /output/model_checkpoint \\
-      --checkpoint 3000 \\
-      --output-dir /output/eval_results \\
-      --video-dir /data \\
-      --test-data-dir dataset/test_split
+    video_summarization          → BLEU, ROUGE-L, METEOR
 """
 
 import argparse

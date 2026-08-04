@@ -1,13 +1,7 @@
 #!/usr/bin/env python3
-"""Force every mcq_openended answer to agree with its mcq twin (paired by
-video_id) and use the chosen option's text as the answer/explanation.
+"""Align each MCQ-openended answer with its MCQ twin offline.
 
-Offline: operates directly on a predictions jsonl, no model / GPU needed.
-
-Usage:
-  python eval/harmonize_oe_to_mcq.py \
-      --predictions /output/dp0_lowconf_fix_mcq_probe/predictions_mcq_fixed.jsonl \
-      -o /output/dp0_lowconf_fix_mcq_probe/predictions_oe_harmonized.jsonl
+The selected option's text becomes the openended answer explanation.
 """
 import argparse
 import difflib

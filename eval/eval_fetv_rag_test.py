@@ -1,42 +1,9 @@
 #!/usr/bin/env python3
-"""
-Run RAG-augmented inference on the AI City 2026 Track 7 FETV (FishEye Traffic
-Violation) test clips and generate a submission JSON in the required format.
+"""Run RAG-augmented inference for FETV clips and write a submission JSON.
 
-This mirrors eval_aicity_rag_test.py (same model, same slow-fast sampling, same
-retrieved-evidence block built with the training-time helpers), with three
-FETV-specific differences:
-
-1. A dedicated FETV system prompt (FETV_SYSTEM_PROMPT) carries the task
-   definition, the fisheye viewpoint context, the strict label space, and the
-   exact JSON output contract. The user turn is just the slow-fast video plus
-   the retrieved evidence followed by a short, unified FETV question.
-2. Input comes from the per-clip FETV RAG JSON tree produced by
-   RAG_retriever/RAG_train_fetv.py (one JSON per clip). Only the retrieved
-   evidence (captions / scene / tracks / frame ranges) is consumed; the question
-   text is a fixed unified prompt, not read from the RAG record.
-3. The output is coerced into the FETV submission schema — a flat JSON array,
-   one object per clip with `clip_name`, the 12 `answer_*` structured fields and
-   `answer_description` — and validated against the allowed value sets from
-   dataset/test/FETV/evaluate.py. Clips with no RAG output (or unparseable model
-   output) are still emitted with safe default field values so the submission
-   covers every clip.
-
-Example (4-GPU sharded):
-    cd train
-    for rank in 0 1 2 3; do
-      python eval/eval_fetv_rag_test.py \
-        --model-dir /output/model_checkpoint --lora \
-        --rag-dir data/RAG_Info/test/FETV \
-        --clip-dir data/videos/FETV \
-        --video-dir data/videos \
-        --output-dir eval/output_fetv \
-        --shard-rank 0 --shard-size 1 &
-    done
-    wait
-    python ../eval/eval_fetv_rag_test.py \
-      --rag-dir data/RAG_Info/test/FETV --clip-dir data/videos/FETV \
-      --output-dir eval/output_fetv --shard-size 4 --merge-shards
+The script uses training-time slow-fast sampling and evidence formatting, then
+coerces each response into the fixed FETV schema. Missing evidence or
+unparseable responses receive defaults so every clip is included.
 """
 
 import argparse
@@ -52,7 +19,7 @@ import torch
 from peft import PeftModel
 from transformers import AutoProcessor, Qwen3VLForConditionalGeneration
 
-# --- make sibling eval modules and the train/ package importable ---------------
+# Make sibling evaluation modules and the train package importable.
 _THIS_DIR = Path(__file__).resolve().parent
 _TRAIN_DIR = _THIS_DIR.parent / "train"
 for _p in (_THIS_DIR, _TRAIN_DIR):
@@ -61,7 +28,7 @@ for _p in (_THIS_DIR, _TRAIN_DIR):
 
 from eval_aicity import run_inference, extract_answer  # noqa: E402
 
-# Reuse the EXACT training-time evidence + slow-fast helpers for parity.
+# Reuse training-time evidence and slow-fast helpers for parity.
 from qwenvl.data.data_processor_rag import (  # noqa: E402
     format_evidence_rag,
     _video_fps,

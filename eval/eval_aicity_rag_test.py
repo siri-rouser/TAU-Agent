@@ -1,51 +1,11 @@
 #!/usr/bin/env python3
+"""Run RAG-augmented inference and write an ``item_index,prediction`` CSV.
+
+The input mirrors RAG training: slow-fast video frames, retrieved evidence, and
+the question. Training-time evidence and sampling helpers are reused for parity.
+RAG results are matched to official items by ``(video_id, question)`` so items
+without retrieved evidence are still represented in the submission.
 """
-Run inference on the RAG-augmented AI City 2026 Track 3 test set and generate a
-submission CSV in the required `item_index,prediction` format.
-
-Unlike eval_aicity_official_test.py (which feeds the raw video + question), this
-script reconstructs the SAME model input used during RAG SFT
-(qwenvl/data/data_processor_rag.py :: preprocess_qwen_visual_rag):
-
-    <video frames (slow-fast sampled)> + <retrieved evidence> + <question>
-
-The retrieved evidence and slow-fast sampling config are taken from the per-video
-RAG JSON tree produced by RAG_retriever/RAG_train.py (one JSON per video, each
-holding a `results` list). To guarantee train/eval parity, the evidence text and123
-
-slow-fast video element are built with the very same helpers used in training:
-`format_evidence_rag`, `_video_fps`, `RAG_BASE_FPS`, `RAG_DENSE_MULT`.
-
-The only intentional train/eval difference is that retrieved-evidence DROPOUT is
-disabled here — at inference we always show the full evidence block.
-
-The RAG JSON results carry no `item_index`, so each result is mapped back to the
-official test item via (video_id, question). Official items with no RAG output
-(e.g. videos RAG skipped for lack of captions) are still emitted with an empty
-prediction so the submission contains every item_index.
-
-Example (2-GPU sharded):
-    for rank in 0; do
-      python eval/eval_aicity_rag_test.py \
-        --model-dir /output/model_checkpoint --lora \
-        --rag-dir data/RAG_Info/test/tar_test/tar_test \
-        --test-json data/dataset/test/tar_test/test.json \
-        --video-dir data/videos \
-        --output-dir eval/aicity_test \
-        --gemini-caption-dir data/captions/gemini31/tar_test \
-        --shard-rank 0 --shard-size 1 &
-    done
-    wait
-    python eval/eval_aicity_rag_test.py \
-    --model-dir /output/model_checkpoint --lora \
-    --rag-dir data/RAG_Info/test/tar_test/tar_test \
-    --test-json data/dataset/test/tar_test/test.json \
-    --output-dir eval/aicity_test --shard-size 1 --merge-shards
-"""
-
-# NOTE: --rag-dir must point at wherever RAG_stage1.py actually wrote per-video
-# JSONs for this split/task (out_dir/task/...); check the real path on disk
-# (e.g. `ls data/RAG_Info/test/tar_test`) if you see "RAG results: 0" below.
 
 import argparse
 import csv
@@ -137,7 +97,7 @@ BACKGROUND_SYS_SCENE_DESC = (
     "static layout and physical environment."
 )
 
-# --- make sibling eval modules and the train/ package importable ---------------
+# Make sibling evaluation modules and the train package importable.
 _THIS_DIR = Path(__file__).resolve().parent
 _TRAIN_DIR = _THIS_DIR.parent / "train"
 for _p in (_THIS_DIR, _TRAIN_DIR):
@@ -146,7 +106,7 @@ for _p in (_THIS_DIR, _TRAIN_DIR):
 
 from eval_aicity import run_inference, extract_answer  # noqa: E402
 
-# Reuse the EXACT training-time evidence + slow-fast helpers for parity.
+# Reuse training-time evidence and slow-fast helpers for parity.
 from qwenvl.data.data_processor_rag import (  # noqa: E402
     format_evidence_rag,
     _video_fps,

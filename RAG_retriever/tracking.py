@@ -462,11 +462,17 @@ class Tracking:
     # ------------------------------------------------------------------
 
     def _get_classifier(self):
-        """Load the VehicleClassifier on first use and cache it."""
+        """Load the VehicleClassifier on first use and cache it.
+
+        Sourced from the MOT_classifier package (vendored as a sibling repo
+        clone), which supersedes the original top-level ``vehicle_classifier``
+        package but exposes the same ``vehicle_classifier(checkpoint_path, ...)``
+        factory / ``.results(image)`` API.
+        """
         if self._classifier is None:
-            _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            if _REPO_ROOT not in sys.path:
-                sys.path.insert(0, _REPO_ROOT)
+            _MOT_CLASSIFIER_ROOT = os.path.join(_REPO_ROOT, "MOT_classifier")
+            if _MOT_CLASSIFIER_ROOT not in sys.path:
+                sys.path.insert(0, _MOT_CLASSIFIER_ROOT)
             from vehicle_classifier import vehicle_classifier
             self._classifier = vehicle_classifier(
                 self.classifier_checkpoint,

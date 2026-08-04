@@ -1,40 +1,8 @@
 #!/usr/bin/env python3
-"""5-sample majority voting for mcq+bcq on a RAG-trained model (e.g. dp0 /
-dp0_new_grpo), using RAG-formatted messages (video + retrieved evidence +
-question) instead of the background-prompt format.
+"""Run majority voting for MCQ and BCQ tasks using RAG-formatted inputs.
 
-This exists because those models' baseline eval (eval_aicity_rag_test.py) is
-a single greedy pass with no confidence signal, unlike the background-LoRA
-pipeline's eval_aicity_vote.py. This script produces the same kind of
-`vote_agreement`/`vote_stable` metadata so the downstream bcq/mcq fix
-scripts (fix_bcq_pair_violations_rag.py, and an mcq analog) have a
-confidence signal to work with.
-
-Same voting design as eval_aicity_vote.py's run_voted_closed: k=5 samples
-(1 greedy + 4 sampled), majority vote; if unstable, one "informed tie-break"
-pass showing the model its own prior answers and asking it to commit to one
-final answer (instead of blindly re-asking or forcing more frames).
-
-Usage (single GPU):
-    python eval/vote_rag_mcq_bcq.py \
-      --model-dir /output/model_checkpoint --lora \
-      --test-json data/dataset/test/tar_test/test.json \
-      --rag-dir /data/RAG_Stage2_test_new/tar_test \
-      --video-dir /data \
-      -o /output/vote_mcqbcq
-
-Usage (multi-GPU, one shard process per GPU, then merge):
-    for rank in 0 1 2 3 4; do
-      CUDA_VISIBLE_DEVICES=$rank python eval/vote_rag_mcq_bcq.py \
-        --model-dir /output/model_checkpoint --lora \
-        --test-json data/dataset/test/tar_test/test.json \
-        --rag-dir /data/RAG_Stage2_test_new/tar_test \
-        --video-dir /data \
-        --tasks mcq_openended,bcq_openended \
-        -o /output/vote_mcqbcq_oe --shard-rank $rank --shard-size 5 &
-    done
-    wait
-    python eval/vote_rag_mcq_bcq.py -o /output/vote_mcqbcq_oe --shard-size 5 --merge-shards
+The script records vote agreement and stability metadata for downstream
+reconsideration passes, with an informed tie-break for unstable votes.
 """
 import argparse
 import glob

@@ -1,54 +1,9 @@
 #!/usr/bin/env python3
-"""Consensus-reranked, cross-task-context regeneration for free-text TAR answers.
+"""Regenerate free-text answers using cross-task context and medoid selection.
 
-Merges `eval_consensus_rerank.py` (medoid reranking over K sampled candidates)
-with `regen_freetext_context.py` (re-asking each free-text question using the
-model's OWN earlier answers to all four free-text questions of the same video
-as extra context). For each target item this script:
-
-  1. builds a "cross-task context" block from an ORIGINAL predictions snapshot
-     (all four free-text answers for that video, including this task's own
-     previous answer) — exactly like regen_freetext_context.py;
-  2. samples K candidates (1 greedy + K-1 at --temperature) for the re-asked
-     question with that context block + RAG evidence attached;
-  3. picks the medoid (highest mean pairwise similarity to the other
-     candidates) as the final prediction — exactly like eval_consensus_rerank.py.
-
-Context always comes from the ORIGINAL snapshot (not from other shards or
-regenerated results), so shard order and regeneration order do not matter and
-there is no cascading.
-
-Free-text tasks: open_qa, causal_linkage, temporal_description, video_summarization
-
-Similarity scorers:
-  --scorer bertscore  (default) roberta-large BERTScore F1, matches the official
-                      metric; pairs are batched in one scorer call per item.
-  --scorer minilm     sentence-transformers all-MiniLM-L6-v2 cosine; much
-                      faster, slightly less aligned with the metric.
-
-Usage (single GPU):
-  python eval/regen_freetext_consensus.py \
-      --model-dir /output/model_checkpoint --lora \
-      --predictions eval/aicity_test/predictions/rag_test_predictions.jsonl \
-      --rag-dir /data/RAG_Stage2_test_new/tar_test \
-      --video-dir /data \
-      --num-samples 5 --temperature 0.7 \
-      -o /output/freetext_consensus
-
-Usage (multi-GPU, one shard process per GPU, then merge):
-  for rank in 0 1 2 3 4; do
-    CUDA_VISIBLE_DEVICES=$rank python eval/regen_freetext_consensus.py \
-        --model-dir /output/model_checkpoint --lora \
-        --predictions eval/aicity_test/predictions/rag_test_predictions.jsonl \
-        --rag-dir /data/RAG_Stage2_test_new/tar_test \
-        --video-dir /data \
-        --num-samples 5 --temperature 0.7 \
-        -o /output/freetext_consensus --shard-rank $rank --shard-size 5 &
-  done
-  wait
-  python eval/regen_freetext_consensus.py \
-      --predictions eval/aicity_test/predictions/rag_test_predictions.jsonl \
-      -o /output/freetext_consensus --shard-size 5 --merge-shards
+Each item is sampled multiple times with RAG evidence; the candidate closest to
+the others is selected. Context comes from the original prediction snapshot so
+shards and regeneration order do not affect one another.
 """
 import argparse
 import csv
@@ -72,7 +27,7 @@ from eval_aicity_rag_test import (  # noqa: E402
 
 FREETEXT_TASKS = ("open_qa", "causal_linkage", "temporal_description", "video_summarization")
 
-# Human-readable labels used when injecting a sibling answer as context.
+# Labels used when injecting sibling answers as context.
 TASK_LABELS = {
     "open_qa": "Open question answering",
     "causal_linkage": "Causal linkage between events",
@@ -137,7 +92,7 @@ def pick_medoid(cands: list[str], sim) -> tuple[int, list[float]]:
 
 
 # ---------------------------------------------------------------------------
-# Cross-task context + RAG evidence message building (from regen_freetext_context.py)
+# Cross-task context and RAG evidence message building.
 # ---------------------------------------------------------------------------
 def load_rag_index(rag_dir):
     index = {}
@@ -231,7 +186,7 @@ def sample_candidates(rec, rag_index, model, processor, args, context_by_task):
 
 
 # ---------------------------------------------------------------------------
-# Output helpers (from regen_freetext_context.py)
+# Output helpers.
 # ---------------------------------------------------------------------------
 def write_outputs(output_dir: Path, records: list):
     """Write the final merged jsonl + submission CSV over ALL records."""

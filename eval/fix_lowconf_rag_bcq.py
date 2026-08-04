@@ -1,24 +1,8 @@
 #!/usr/bin/env python3
-"""RAG-aware reconsideration for bcq/bcq_openended violation pairs (the "one Yes +
-one No per video" rule) of a RAG-trained model, driven by the vote metadata from
-vote_rag_mcq_bcq.py.
+"""Reconsider paired BCQ answers using RAG evidence and vote metadata.
 
-For each same-label violation pair, re-ask the model with the RAG evidence plus
-its own scene_description / temporal_description context for that video. If
-independent reconsideration naturally yields one Yes + one No, use that.
-Otherwise (with --force-bcq) try a joint re-ask that shows the model both
-questions together and asks it to split them; if that also fails, fall back to
-flipping the lower-vote_agreement member.
-
-Usage:
-  python eval/fix_lowconf_rag_bcq.py \
-      --model-dir /output/model_checkpoint --lora \
-      --predictions /output/vote_mcqbcq/predictions_voted.jsonl,/output/vote_mcqbcq_oe/predictions_voted.jsonl \
-      --descriptions eval/aicity_test/predictions/rag_test_predictions.jsonl \
-      --rag-dir /data/RAG_Stage2_test_new/tar_test \
-      --video-dir /data --tasks bcq,bcq_openended \
-      --force-bcq \
-      -o /output/dp0_lowconf_fix
+The pass first re-asks same-label pairs, optionally uses a joint question to
+recover a Yes/No split, and otherwise applies the lower-confidence fallback.
 """
 import argparse
 import glob
@@ -89,7 +73,7 @@ def load_rag_index(rag_dir):
     return index
 
 
-# context field -> label shown to the model
+# Context field to label shown to the model.
 CTX_LABELS = {
     "scene": "Scene description",
     "temporal": "Temporal description",
@@ -153,16 +137,11 @@ def is_fault_attribution_question(question):
     return bool(_FAULT_ATTRIBUTION_RE.search(question or ""))
 
 
-# ---------------------------------------------------------------------------
-# neutral perceptual probes for fault/sequence questions
-# ---------------------------------------------------------------------------
-# The persistent mcq errors share one signature: both twins agree on a wrong
-# fault narrative, usually blaming the top-to-bottom vehicle when the vehicle
-# entering from the side was the violator (or vice versa). Re-asking the mcq --
-# even with elimination constraints -- just re-confirms the narrative, because
-# the wrong perception is baked into how the model watches the video with the
-# options in front of it. These probes ask for the underlying PERCEPTUAL facts
-# with no options shown, so the answer cannot be pattern-matched to a narrative.
+# ------------------------------------------------------------------------------
+# Neutral perceptual probes for fault and sequence questions.
+# ------------------------------------------------------------------------------
+# Ask for underlying visual facts without answer options so the model is less
+# likely to anchor on a preselected fault narrative.
 
 PROBE_QUESTIONS = [
     "Which two vehicles collide in this video? For EACH of the two, state: its color and "
@@ -222,9 +201,8 @@ def build_messages(video_abs, result, max_frames, ctx_parts, vote_hint=None, fau
             ctx += f"{label}: \"{text}\"\n"
         ctx += "\n"
     if bcq_facts:
-        # The bcq answers of this video are verified-reliable, so use them as ACTIVE
-        # elimination constraints, not passive context: elimination is a different
-        # operation than selection and can dislodge a consistent wrong prior.
+        # Use BCQ answers as active elimination constraints rather than passive
+        # context, so contradictory options can be removed explicitly.
         ctx += ("The following yes/no facts about this video have been independently "
                 "verified and are established:" + bcq_facts + "\n\n"
                 "Before answering, check each option against these established facts and "
@@ -254,8 +232,7 @@ def reask(rec, rag_index, model, processor, args, enabled, maps, vote_hint=False
         return None
     hint = format_vote_hint(rec) if vote_hint else None
     fhint = FAULT_ATTRIBUTION_HINT if (fault_hint and is_fault_attribution_question(rec["question"])) else None
-    # For mcq/mcq_openended, pull the (verified) bcq facts out of the passive context
-    # and pass them as active elimination constraints instead.
+    # For MCQ tasks, pass BCQ facts as active elimination constraints.
     bcq_facts = None
     enabled_ctx = enabled
     if rec["task_type"] in ("mcq", "mcq_openended") and "bcq" in enabled:
@@ -530,19 +507,16 @@ def main():
                         changed.append(rec["item_index"])
                         print(f"  {vid.split('/')[-1]} [{rec['item_index']}]: FORCE-JOINT -> {nl}")
                 else:
-                    # Fallback: the old heuristic, flipping the member with the lower
-                    # vote_agreement to the opposite of the other's label. Only reached
-                    # when the joint re-ask couldn't produce a clean split (e.g. no RAG
-                    # match, or the model still refused to split even head-to-head).
+                    # Fallback: flip the member with the lower vote agreement when the
+                    # joint re-ask cannot produce a clean split.
                     cur = (a.get("label") or "").capitalize()  # both same
                     keep, flip = (a, b) if (a.get("vote_agreement") or 0) >= (b.get("vote_agreement") or 0) else (b, a)
                     new_label = "No" if cur == "Yes" else "Yes"
                     raw_flip = rb if flip is b else ra
                     old_pred = flip["prediction"]
                     if task == "bcq_openended":
-                        # The old explanation was reasoned toward the PRE-flip label and
-                        # would contradict new_label -- regenerate a fresh one grounded in
-                        # the flipped answer instead of just re-prefixing stale text.
+                        # Regenerate an explanation if the existing text supports the
+                        # previous label.
                         new_pred = regenerate_bcq_openended_explanation(
                             flip, new_label, rag_index, model, processor, args, bcq_fields, maps)
                         if new_pred is None:

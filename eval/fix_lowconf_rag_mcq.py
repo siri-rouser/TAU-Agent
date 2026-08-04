@@ -1,49 +1,9 @@
 #!/usr/bin/env python3
-"""MCQ-only reconsideration pass.
+"""Reconsider MCQ and MCQ-openended answers after BCQ correction.
 
-This is the second half of the old eval/fix_lowconf_rag.py, split out so you can
-run the (slow) bcq/bcq_openended fixes once and then iterate on the mcq logic
-without re-running bcq every time.
-
-It READS the jsonl written by eval/fix_lowconf_rag_bcq.py
-(``predictions_lowconf_fixed.jsonl``) -- which already has the corrected
-bcq/bcq_openended answers -- and only touches mcq / mcq_openended:
-
-  1. Build "bcq context": collect this video's already-corrected yes/no facts.
-     For mcq/mcq_openended reconsiders they are injected as ACTIVE elimination
-     constraints ("eliminate every option contradicting these verified facts"),
-     not passive context ('bcq' in --ctx-fields).
-  2. mcq <-> mcq_openended cross-consistency unify (--unify-mcq-oe, on by
-     default): pair each mcq with its mcq_openended twin by video_id and reconcile
-     them (see unify_mcq_oe below). Reconsiders are k-sample votes
-     (--reconsider-samples/--reconsider-min-votes): confirming the current
-     letter needs only a plurality, CHANGING it needs a unanimous fresh vote; an
-     inconclusive vote on either side (or a vote_agreement tie in the fallback)
-  3. Optional perception-first fault probe (--probe-fault, off by default): after
-     unify, re-probes SUSPICIOUS fault/sequence mcq pairs (see probe_fault_stage
-     below) with no options shown, then re-asks both twins with the probed facts
-     injected; changes the pair only on a >= --probe-min-votes supermajority on
-     BOTH twins landing on the same aligned option. Can overturn currently-
-     agreeing pairs, which unify_mcq_oe never touches.
-
-NOTE: the old "low-confidence single-item reconsider" stage was REMOVED: measured
-against the manual GT it was net harmful for mcq (3/3 of its changes flipped a
-correct-majority answer to the wrong minority, 0 fixes).
-
-`load_model_and_processor`, `load_rag_index`, `reask`, and `probe_video_facts` are
-imported from fix_lowconf_rag_bcq.py so the two scripts share exactly the same logic.
-
-Usage:
-  python fix_lowconf_rag_mcq.py \
-      --model-dir /output/model_checkpoint --lora \
-      --predictions /output/bcq_fixed/predictions_lowconf_fixed.jsonl \
-      --descriptions eval/aicity_test/predictions/rag_test_predictions.jsonl \
-      --rag-dir /data/RAG_Stage2_test_new/tar_test \
-      --video-dir /data \
-      --probe-fault \
-      --gpus 0,1,2,3,4 \
-      --ctx-fields scene \
-      -o /output/mcq_fixed
+The pass injects BCQ facts as elimination constraints, reconciles paired option
+sets through fresh votes, and can run an option-free perceptual probe for
+suspicious fault or sequence questions.
 """
 import argparse
 import difflib
@@ -188,8 +148,7 @@ def unify_mcq_oe(records, rag_index, model, processor, args, mcq_fields, maps, c
           * if they still differ -> unify to the winner of the POOLED fresh vote
             counts (oe letters mapped into mcq letter space by alignment); on a
             pooled tie fall back to the strictly-higher stale vote_agreement; if
-            that also ties the pair is left unchanged (measured: arbitrary
-            tie-breaks flip correct answers).
+            that also ties the pair is left unchanged.
     If the two option sets can't be aligned confidently (--align-min-score), the pair
     is left as-is rather than force-unified."""
     mcq_by, oe_by = {}, {}
@@ -207,10 +166,8 @@ def unify_mcq_oe(records, rag_index, model, processor, args, mcq_fields, maps, c
           f"recheck-agreement={args.recheck_agreement}; "
           f"reconsider-vote={need}/{k} @ T={args.reconsider_temperature}")
     if getattr(args, "probe_fault", False):
-        # The perception-first probe stage owns the suspicious fault/sequence pairs:
-        # its no-options probe + 2x supermajority gate is measurably more reliable
-        # there than this option-anchored re-ask (which stochastically flipped a
-        # correct answer the probe then correctly refused to touch). Hand them over.
+        # The perception-first stage handles suspicious fault and sequence pairs
+        # with an option-free probe, so leave those pairs to that stage.
         handoff = set(probe_pair_vids(records, args)[0])
         n_before = len(vids)
         vids = [v for v in vids if v not in handoff]
@@ -219,14 +176,11 @@ def unify_mcq_oe(records, rag_index, model, processor, args, mcq_fields, maps, c
     vids = _shard_vids(vids, args, "unify")
 
     def reask_letter(rec, opts, cur):
-        """k-sample reconsider vote. A single temp=0 re-ask is a WEAKER estimator than
-        the original 5-sample vote it would override (measured: it flipped 3/3
-        correct-majority items to the wrong minority). Asymmetric acceptance:
+        """Run a k-sample reconsideration vote with asymmetric acceptance:
           - CONFIRMING the current letter `cur` needs only to tie-or-win the fresh
             plurality (the original 5-vote already backs it);
-          - CHANGING to a different letter needs >= --reconsider-min-votes of the
-            --reconsider-samples fresh samples (measured at 4/5: a wrong changed
-            letter still slipped through; the default is therefore unanimous).
+                    - CHANGING to a different letter needs >= --reconsider-min-votes of the
+                        --reconsider-samples fresh samples.
           - anything else is inconclusive -> None (caller leaves the pair alone).
         Returns (letter_or_None, raw_of_winning_letter, counts_dict_or_None-if-no-RAG)."""
         counts = Counter()
@@ -276,10 +230,8 @@ def unify_mcq_oe(records, rag_index, model, processor, args, mcq_fields, maps, c
               f"{tag(o, rlo)} {co} (was {lo}) "
               f"[None = inconclusive: neither confirmed nor {need}/{k} for a change]")
         if rlm is None or rlo is None:
-            # An inconclusive fresh vote on either side means we have no reliable new
-            # evidence for this pair; forcing alignment from the original letters via
-            # the vote_agreement fallback is exactly the blind flip that broke
-            # correct answers (measured) -- leave the pair completely unchanged.
+            # Without conclusive fresh evidence on both sides, leave the pair
+            # unchanged rather than forcing alignment from the original letters.
             print(f"  {name}: inconclusive reconsider "
                   f"({'mcq' if rlm is None else 'oe'} side) -- pair left unchanged")
             continue
@@ -289,12 +241,8 @@ def unify_mcq_oe(records, rag_index, model, processor, args, mcq_fields, maps, c
             src = "reconsider-agree"
             outcome = f"BOTH reconsidered to the same option -> {tag(m, rlm)}, {tag(o, rlo)}"
         else:
-            # Still disagree after conclusive fresh votes on both sides. Decide by the
-            # POOLED fresh vote counts (oe letters mapped into mcq letter space via
-            # option alignment): the fresh evidence, gathered under the bcq elimination
-            # constraints, is a stronger signal than the STALE pre-fix vote_agreement
-            # (measured: stale agreement kept a unanimous-wrong mcq over an oe twin
-            # whose fresh vote favored the correct option 6:4 pooled).
+            # If both fresh votes are conclusive but still disagree, use pooled
+            # counts after mapping OE letters into MCQ option space.
             pooled = Counter(cm or {})
             pool_ok = True
             for L, n in (co or {}).items():
@@ -322,10 +270,8 @@ def unify_mcq_oe(records, rag_index, model, processor, args, mcq_fields, maps, c
                 outcome = (f"still disagree -> pooled fresh votes {dict(pooled)} pick "
                            f"{tag(m, best)} / {tag(o, tgt_oe)} (align={sc:.2f})")
             else:
-                # Pooled fresh vote is an exact tie (or oe options unmappable):
-                # fall back to stale vote_agreement; if THAT also ties, leave the
-                # pair unchanged (an arbitrary preference mapped a wrong letter
-                # onto a correct one, measured).
+                # On a pooled tie or unmappable options, use stale agreement; if
+                # that also ties, leave the pair unchanged.
                 if agr_m == agr_o:
                     print(f"  {name}: still disagree, pooled fresh vote tied "
                           f"({dict(pooled)}) and vote_agreement tied ({agr_m}) "
@@ -364,13 +310,10 @@ def unify_mcq_oe(records, rag_index, model, processor, args, mcq_fields, maps, c
 
 def probe_pair_vids(records, args):
     """The set of video_ids the probe stage will handle: fault/sequence pairs
-    (fix_lowconf_rag_bcq._PROBE_ELIGIBLE_RE) that are SUSPICIOUS (either twin's
+    (fix_lowconf_rag_bcq._PROBE_ELIGIBLE_RE) that are suspicious (either twin's
     original vote_agreement <= --probe-suspect-agreement, or the twins' current
     answers disagree under alignment). Shared by unify_mcq_oe (which must SKIP
-    these when --probe-fault is on -- measured: unify's option-anchored re-ask is
-    stochastically less reliable than the perception-first probe on exactly
-    these pairs, and broke a correct answer the probe then refused to touch)
-    and by probe_fault_stage itself."""
+    these when --probe-fault is on) and by probe_fault_stage itself."""
     mcq_by, oe_by = {}, {}
     for r in records:
         if r["task_type"] == "mcq":
@@ -620,8 +563,7 @@ def main():
                     help="Sampling temperature for the non-greedy reconsider samples.")
     ap.add_argument("--reconsider-min-votes", type=int, default=5,
                     help="Fresh votes required to CHANGE a letter (confirming the current "
-                         "letter only needs a plurality). Measured at 4/5 a wrong changed "
-                         "letter still slipped through, so default is unanimous.")
+                        "letter only needs a plurality; default is unanimous).")
     ap.add_argument("--gpus", default=None,
                     help="Comma-separated GPU ids (e.g. 0,1,2,3,4). When given, spawns "
                          "one worker per GPU, partitions videos across them (stable "
@@ -672,9 +614,6 @@ def main():
     if "bcq" in mcq_fields:
         print(f"\nbcq facts built for {len(maps['bcq'])} videos (used as elimination "
               f"constraints in the mcq/mcq_openended reconsider)")
-
-    # NOTE: the low-confidence single-item reconsider stage was removed -- measured
-    # minority and fixed nothing. Only the mcq<->mcq_openended unify remains.
 
     # ---- mcq <-> mcq_openended cross-consistency unify ----
     if args.unify_mcq_oe:

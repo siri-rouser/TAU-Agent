@@ -164,7 +164,6 @@ Evaluation instructions and the corresponding command will be added here.
 
 - [ ] Add the paper link and a complete citation entry after publication.
 - [ ] Document the PSI-VQA evaluation workflow, required inputs, and example command.
-- [ ] Add a short troubleshooting section for common environment, checkpoint, and API configuration issues.
 
 ## Citation
 
