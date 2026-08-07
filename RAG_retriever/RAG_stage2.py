@@ -10,12 +10,12 @@ with the video and produces:
 
 Outputs
 -------
-  <output_dir>/<stem>.json    raw retrieval cache (resumability marker for the LLM call)
+  <output_dir>/<stem>.json               parsed retrieval (resumability marker)
       fields: factual_information, potential_information, frame_ranges
-  <stage1_rag_dir>/... .json  the matching stage1 (RAG_stage1.py) JSON, updated *in place*
+  <output_dir>/<split>/<stem>.json       enriched copy of <stage1_rag_dir> JSONs
       adds stage2_factual, stage2_potential; merges relevant_frame_ranges
 
-Resumable: re-running skips videos whose stage1 JSON already carries stage2_factual.
+Resumable: re-running skips videos whose stage2_rag JSON already exists.
 
 Usage
 -----
@@ -53,14 +53,13 @@ SPLIT_DEFAULTS = {
     },
     "test": {
         "json_dir": os.path.join(_REPO_ROOT, "data", "dataset", "test", "tar_test", "test.json"),
-        "stage1_rag_dir": os.path.join(_REPO_ROOT, "data", "RAG_Info", "test", "tar_test", "test"),
+        "stage1_rag_dir": os.path.join(_REPO_ROOT, "data", "RAG_Info", "test", "tar_test"),
         "output_dir": os.path.join(_REPO_ROOT, "data", "RAG_Stage2", "test"),
     },
 }
 
 STAGE2_RAG_DIR = SPLIT_DEFAULTS["train"]["output_dir"]
 AICITY_TRAIN_DIR = SPLIT_DEFAULTS["train"]["stage1_rag_dir"]
-AICITY_TEST_DIR = SPLIT_DEFAULTS["test"]["stage1_rag_dir"]
 AICITY_TRAIN_2STAGE_DIR = os.path.join(_REPO_ROOT, "data", "aicity_train_2stage")
 SPLIT = "train"
 
@@ -113,30 +112,11 @@ def load_video_jobs(json_dir, media_root, limit=None):
     return jobs
 
 
-def _stage1_src_path(job):
-    """Path to the matching stage1 (RAG_stage1.py) JSON for this video.
-
-    Stage1 output layout differs by split: train nests results under
-    data/RAG_Info/train/<task>/<video_id-relative>.json, while test is flat
-    under data/RAG_Info/test/tar_test/test/<basename>.json.
-    """
-    video_rel = os.path.splitext(job["video_id"])[0]
-    if SPLIT == "train":
-        return os.path.join(AICITY_TRAIN_DIR, video_rel + ".json")
-    return os.path.join(AICITY_TEST_DIR, os.path.basename(video_rel) + ".json")
-
-
 def _pending(job):
-    """Return True if the stage1 JSON hasn't been merged with stage2 info yet."""
-    src_path = _stage1_src_path(job)
-    if not os.path.exists(src_path):
-        return True  # nothing to merge into yet; process_video will warn
-    try:
-        with open(src_path) as f:
-            results = json.load(f).get("results", [])
-    except (json.JSONDecodeError, OSError):
-        return True
-    return not results or "stage2_factual" not in results[0]
+    """Return True if step 2 enrichment has not yet been written."""
+    video_rel = os.path.splitext(job["video_id"])[0]
+    enriched = os.path.join(STAGE2_RAG_DIR, SPLIT, video_rel + ".json")
+    return not os.path.exists(enriched)
 
 
 # ---------------------------------------------------------------------------
@@ -146,15 +126,12 @@ _WORKER = {"api_key": None, "output_dir": STAGE2_RAG_DIR, "stage1_rag_dir": AICI
 
 
 def _init_worker(api_key, output_dir, stage1_rag_dir, split):
-    global STAGE2_RAG_DIR, AICITY_TRAIN_DIR, AICITY_TEST_DIR, SPLIT
+    global STAGE2_RAG_DIR, AICITY_TRAIN_DIR, SPLIT
     _WORKER["api_key"] = api_key
     _WORKER["output_dir"] = output_dir
     _WORKER["stage1_rag_dir"] = stage1_rag_dir
     STAGE2_RAG_DIR = output_dir
-    if split == "train":
-        AICITY_TRAIN_DIR = stage1_rag_dir
-    else:
-        AICITY_TEST_DIR = stage1_rag_dir
+    AICITY_TRAIN_DIR = stage1_rag_dir
     SPLIT = split
     print(f"[worker pid={os.getpid()}] ready", flush=True)
 
@@ -228,12 +205,12 @@ def _merge_frame_ranges(existing, new_ranges):
 
 
 def process_video(job):
-    """Run stage2 retrieval for one video and merge the result into stage1's JSON.
+    """Run stage2 retrieval for one video and write outputs.
 
     Saves:
-      <output_dir>/<video_rel>.json    raw retrieval fields (resumability marker for the LLM call)
-      <stage1 JSON for this video>     updated in place: adds stage2_factual, stage2_potential;
-          merges relevant_frame_ranges
+      <output_dir>/<video_rel>.json               parsed retrieval fields (resumability marker)
+      <output_dir>/<split>/<video_rel>.json        enriched copy of the matching <stage1_rag_dir> JSON
+          adds stage2_factual, stage2_potential; merges relevant_frame_ranges
 
     Returns (status, job, n_updated, detail).
     """
@@ -242,6 +219,7 @@ def process_video(job):
 
     try:
         video_rel = os.path.splitext(job["video_id"])[0]
+        bare_stem = os.path.basename(video_rel)
         # Raw stage2 cache lives at STAGE2_RAG_DIR/<video_rel>.json, nested by
         # dataset so basenames that repeat across datasets don't collide.
         raw_path = os.path.join(STAGE2_RAG_DIR, video_rel + ".json")
@@ -255,9 +233,10 @@ def process_video(job):
             new_frame_ranges = cached.get("relevant_frame_ranges", [])
         else:
             # Stage2 only runs over track3 data (train's track3 folder and its
-            # test-split counterpart, tar_test). 
-            from tools import ToolkitStage2_trainset, ToolkitStage2_testset
-            ToolkitCls = ToolkitStage2_trainset if SPLIT == "train" else ToolkitStage2_testset
+            # test-split counterpart, tar_test). ToolkitStage2_PSI is unused in
+            # practice and intentionally not wired up here.
+            from tools import ToolkitStage2, ToolkitStage2_testset
+            ToolkitCls = ToolkitStage2 if SPLIT == "train" else ToolkitStage2_testset
             toolkit = ToolkitCls(video_id=job["video_id"], video_path=job["video_path"])
             retrieval = _run_retrieval(toolkit, _WORKER["api_key"])
 
@@ -286,9 +265,15 @@ def process_video(job):
                 "relevant_frame_ranges": new_frame_ranges,
             })
 
-        # 2. Enrich the stage1 RAG_Info JSON *in place* (no separate copy).
+        # 2. Enrich stage1 RAG JSONs and write to output_dir/<split>.
+        # Stage1 (RAG_train.py) output layout differs by split: train nests
+        # results under data/RAG_Info/train/<task>/<video_id-relative>.json,
+        # while test is flat under data/RAG_Info/test/tar_test/<basename>.json.
         n_updated = 0
-        src_path = _stage1_src_path(job)
+        if SPLIT == "train":
+            src_path = os.path.join(AICITY_TRAIN_DIR, video_rel + ".json")
+        else:
+            src_path = os.path.join(AICITY_TRAIN_DIR, bare_stem + ".json")
         if os.path.exists(src_path):
             with open(src_path) as f:
                 doc = json.load(f)
@@ -298,7 +283,8 @@ def process_video(job):
                 result["relevant_frame_ranges"] = _merge_frame_ranges(
                     result.get("relevant_frame_ranges", []), new_frame_ranges
                 )
-            _atomic_write_json(src_path, doc)
+            dst_path = os.path.join(STAGE2_RAG_DIR, SPLIT, video_rel + ".json")
+            _atomic_write_json(dst_path, doc)
             n_updated = 1
         else:
             print(f"[warn] stage1 src not found: {src_path}", flush=True)
@@ -308,6 +294,9 @@ def process_video(job):
         return "error", job, 0, repr(e)
 
 
+# ---------------------------------------------------------------------------
+# Driver
+# ---------------------------------------------------------------------------
 def parse_args():
     p = argparse.ArgumentParser(
         description="Stage 2 RAG: enrich aicity_train JSONs with video-level context."
@@ -349,12 +338,9 @@ def main():
     jobs = load_video_jobs(args.json_dir, args.media_root, limit=args.limit)
 
     # Apply --output_dir override in the main process so _pending() uses it too.
-    global STAGE2_RAG_DIR, AICITY_TRAIN_DIR, AICITY_TEST_DIR, SPLIT
+    global STAGE2_RAG_DIR, AICITY_TRAIN_DIR, SPLIT
     STAGE2_RAG_DIR = args.output_dir
-    if args.split == "train":
-        AICITY_TRAIN_DIR = args.stage1_rag_dir
-    else:
-        AICITY_TEST_DIR = args.stage1_rag_dir
+    AICITY_TRAIN_DIR = args.stage1_rag_dir
     SPLIT = args.split
 
     if args.start or args.end is not None:

@@ -158,12 +158,7 @@ python eval/eval_fetv_rag_test.py \
 
 ### 4. PSI-VQA
 
-Evaluation instructions and the corresponding command will be added here.
-
-## TODO
-
-- [ ] Add the paper link and a complete citation entry after publication.
-- [ ] Document the PSI-VQA evaluation workflow, required inputs, and example command.
+PSI-VQA Evaluation will come soon.
 
 ## Citation
 
