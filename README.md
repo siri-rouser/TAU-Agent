@@ -13,7 +13,6 @@ Official implementation of **TAU-Agent**, our submission to the **AI City Challe
 - [Usage](#usage)
 - [QA-VLM Checkpoint](#qa-vlm-checkpoint)
 - [Reproducing Results](#reproducing-results)
-- [TODO](#todo)
 - [Citation](#citation)
 - [License](#license)
 
