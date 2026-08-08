@@ -107,6 +107,12 @@ SFT training scripts and DeepSpeed configs are under [train/scripts](train/scrip
 
 The fine-tuned checkpoint used to replicate our results is available on Hugging Face: [TAU-Agent-Question-Answering-VLM](https://huggingface.co/yl4300/TAU-Agent-Question-Answering-VLM/tree/main).
 
+## Model Zoo for RAG_retriever
+
+Download [`last.pt`](https://huggingface.co/datasets/yl4300/TAU-Agent-Dataset/blob/main/weights/last.pt) for the MOT classifier and [`yolo26x.pt`](https://huggingface.co/datasets/yl4300/TAU-Agent-Dataset/blob/main/weights/yolo26x.pt) for the YOLO26 detector from Hugging Face.
+
+Place both files in `RAG_retriever/weights/` to use RAG_retriever.
+
 ## Reproducing Results
 
 ### 1. Prepare the Data
