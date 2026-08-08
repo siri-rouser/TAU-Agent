@@ -157,7 +157,54 @@ python eval/eval_fetv_rag_test.py \
 
 ### 4. PSI-VQA
 
-PSI-VQA Evaluation will come soon.
+PSI-VQA is evaluated zero-transfer with the same QA-VLM used for TAR. The only
+benchmark-specific choice is **task-selective cross-question context**: on the
+ambiguous clips the context enumerates the candidate crossing-intent cues that the
+open-QA answer is scored against, so we keep it for `open_qa`; the same context
+biases the discriminative tasks, so we withhold it for `bcq`/`mcq`. See
+[eval/build_psi_mixed_rag.py](eval/build_psi_mixed_rag.py) for the rationale.
+
+The full flow (context reconstruction &rarr; task-selective filtering &rarr; VLM
+inference &rarr; submission) is scripted in [eval/psi_vqa.sh](eval/psi_vqa.sh):
+
+```bash
+bash eval/psi_vqa.sh
+```
+
+The individual steps are:
+
+```bash
+# Step 0: merge the four per-task question files into one combined test JSON
+python eval/make_psi_test_json.py \
+  --questions-dir data/dataset/test/PSI_VQA \
+  --out data/dataset/test/PSI_VQA/test.json
+
+# Step 1: rebuild the cross-question context deterministically (no API) and
+#         inject it into the RAG evidence
+python RAG_retriever/build_stage2_ctx_noapi.py \
+  --questions-dir data/dataset/test/PSI_VQA \
+  --rag-in  data/RAG_Info/test/PSI_VQA \
+  --rag-out data/RAG_Info/test/PSI_VQA_ctx
+
+# Step 2: keep the context only for open_qa, strip it for bcq/mcq/temporal
+python eval/build_psi_mixed_rag.py \
+  --ctx-dir data/RAG_Info/test/PSI_VQA_ctx \
+  --out     data/RAG_Info/test/PSI_VQA_mixed
+
+# Step 3: run the question-answering VLM
+python eval/eval_aicity_rag_test.py \
+  --model-dir /output/model_checkpoint --lora \
+  --rag-dir data/RAG_Info/test/PSI_VQA_mixed \
+  --test-json data/dataset/test/PSI_VQA/test.json \
+  --video-dir data/videos \
+  --output-dir eval/output_psi \
+  --shard-rank 0 --shard-size 1
+
+# Step 4: build the submission CSV (mcq -> single option letter)
+python eval/make_psi_submission.py \
+  --predictions eval/output_psi/predictions/rag_test_predictions.jsonl \
+  --out eval/output_psi/submission_psi.csv
+```
 
 ## Citation
 
